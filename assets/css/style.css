@@ -33,11 +33,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: linear-gradient(145deg, #6b4226, #3a2414);
+  background: #b98970;
   border-radius: 999px;
-  border: 1px solid rgba(226, 186, 125, 0.45);
-  box-shadow: 0 10px 30px -10px rgba(59, 36, 18, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  color: #f1dcb4;
+  border: 1px solid rgba(43, 36, 32, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(140, 109, 63, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   font-weight: 400;
   z-index: 0;
   overflow: hidden;
@@ -47,7 +47,7 @@
 }
 
 .btn1 span {
-  color: #f1dcb4;
+  color: #ffffff;
 }
 
 .btn1 i {
@@ -56,9 +56,9 @@
 
 .btn1:hover {
   transform: translateY(-2px);
-  border-color: rgba(226, 186, 125, 0.8);
-  box-shadow: 0 14px 34px -10px rgba(59, 36, 18, 0.65), 0 0 0 4px rgba(226, 186, 125, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(43, 36, 32, 0.3);
+  box-shadow: 0 14px 34px -10px rgba(140, 109, 63, 0.6), 0 0 0 4px rgba(217, 190, 142, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .btn1:hover i {
@@ -117,6 +117,55 @@
 
 .reasons-swiper .swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+#enquiry-backdrop {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+#enquiry-panel {
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#enquiry-modal.enquiry-open #enquiry-backdrop {
+  opacity: 1;
+}
+#enquiry-modal.enquiry-open #enquiry-panel {
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  #enquiry-panel {
+    transform: translateY(24px) scale(0.96);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+  #enquiry-modal.enquiry-open #enquiry-panel {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+#mobile-menu-backdrop {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+#mobile-menu-panel {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#mobile-menu.menu-open #mobile-menu-backdrop {
+  opacity: 1;
+}
+#mobile-menu.menu-open #mobile-menu-panel {
+  transform: translateX(0);
+}
+
+#sticky-cta-mobile {
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#sticky-cta-mobile.visible {
+  transform: translateY(0);
 }
 
 

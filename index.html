@@ -51,7 +51,7 @@
     <header id="site-header" class="absolute top-0 inset-x-0 z-50 bg-transparent text-white border-b border-transparent transition-all duration-300">
         <nav class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
             <a href="#home" class="shrink-0">
-                <img id="logo-img" src="assets/images/logo/hori-logo.png" alt="Orizon" width="1282" height="302" class="h-10 w-auto" />
+                <img id="logo-img" src="assets/images/logo/main-logo.webp" alt="Orizon" width="1282" height="302" class="h-16 w-auto" />
             </a>
 
             <ul id="nav-pill" class="hidden lg:flex items-center gap-2 text-sm tracking-wider px-1.5 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/15 drop-shadow transition-colors duration-300">
@@ -68,6 +68,9 @@
                     <a href="#floor-plans" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Floor Plans</a>
                 </li>
                 <li>
+                    <a href="#amenities" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Amenities</a>
+                </li>
+                <li>
                     <a href="#gallery" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Gallery</a>
                 </li>
                 <li>
@@ -76,7 +79,7 @@
             </ul>
 
             <div class="flex items-center gap-4">
-                <a href="tel:+10000000000" aria-label="Call us"
+                <a href="tel:+919330208558" aria-label="Call us"
                     class="relative hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-gold text-ivory">
                     <span class="absolute inline-flex h-8 w-8 rounded-full bg-gold opacity-75 animate-ping"></span>
                     <i class="ri-phone-fill relative text-lg"></i>
@@ -91,35 +94,60 @@
             </div>
         </nav>
 
-        <ul id="mobile-menu" class="hidden lg:hidden flex-col gap-1 px-6 pb-6 text-sm">
-            <li>
-                <a href="#home" class="block py-2 hover:text-gold transition-colors">Home</a>
-            </li>
-            <li>
-                <a href="#overview" class="block py-2 hover:text-gold transition-colors">Overview</a>
-            </li>
-            <li>
-                <a href="#features" class="block py-2 hover:text-gold transition-colors">Features</a>
-            </li>
-            <li>
-                <a href="#amenities" class="block py-2 hover:text-gold transition-colors">Amenities</a>
-            </li>
-            <li>
-                <a href="#floor-plans" class="block py-2 hover:text-gold transition-colors">Floor Plans</a>
-            </li>
-            <li>
-                <a href="#gallery" class="block py-2 hover:text-gold transition-colors">Gallery</a>
-            </li>
-            <li>
-                <a href="#contact" class="block py-2 hover:text-gold transition-colors">Contact</a>
-            </li>
-            <li class="pt-2">
-                <a href="#contact" class="btn-shine btn1 !px-5 !py-2 w-full">
-                    <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
-                </a>
-            </li>
-        </ul>
     </header>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[90] lg:hidden">
+        <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div id="mobile-menu-panel" class="absolute top-0 right-0 h-full w-[82%] max-w-xs bg-white shadow-2xl flex flex-col">
+            <div class="flex items-center justify-between px-6 h-20 border-b border-gold/15 shrink-0">
+                <img src="assets/images/logo/logo-brown.webp" alt="Orizon" class="h-10 w-auto">
+                <button id="mobile-menu-close" aria-label="Close menu"
+                    class="w-10 h-10 flex items-center justify-center text-2xl text-espresso">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <ul class="flex-1 overflow-y-auto px-6 py-4 flex flex-col text-base text-espresso">
+                <li>
+                    <a href="#home" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Home</a>
+                </li>
+                <li>
+                    <a href="#overview" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Overview</a>
+                </li>
+                <li>
+                    <a href="#features" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Features</a>
+                </li>
+                <li>
+                    <a href="#floor-plans" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Floor Plans</a>
+                </li>
+                <li>
+                    <a href="#amenities" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Amenities</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Gallery</a>
+                </li>
+                <li>
+                    <a href="#contact" class="block py-3.5 border-b border-gold/10 hover:text-gold transition-colors">Contact</a>
+                </li>
+                <li class="pt-5">
+                    <a href="#contact" class="btn-shine btn1 !px-5 !py-2.5 w-full justify-center">
+                        <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="sticky-cta-mobile" class="lg:hidden fixed bottom-0 inset-x-0 z-[80] flex h-16 shadow-[0_-4px_16px_rgba(0,0,0,0.12)]">
+        <a href="https://wa.me/919330208558" target="_blank" rel="noopener"
+            class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white text-sm font-medium tracking-wide font-serif">
+            <i class="ri-whatsapp-line text-lg"></i>
+            WhatsApp
+        </a>
+        <a href="#contact" class="btn-shine btn1 flex-1 !rounded-none !min-w-0 !px-0 justify-center">
+            <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
+            <i class="ri-arrow-right-line text-sm"></i>
+        </a>
+    </div>
 
     <section id="home" class="relative overflow-hidden sm:min-h-screen h-svh sm:pb-0 pb-14 flex sm:items-center items-end">
         <div class="hero-bg absolute inset-0 bg-cover sm:bg-top bg-center bg-no-repeat" style="
@@ -142,7 +170,7 @@
                 </h1>
                 <p
                     class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 [animation-delay:300ms] text-white/75 text-base md:text-lg mb-6 max-w-md font-light">
-                    Spread Across <strong class="font-semibold text-white">8.3 Acres</strong>, With <strong class="font-semibold text-white">80% Open Space</strong> And <strong class="font-semibold text-white">6 High-Rise Towers</strong> Designed Around The Horizon. ̰
+                    Spread Across <strong class="font-semibold text-white">8.3 Acres</strong>, With <strong class="font-semibold text-white">80% Open Space</strong> And <strong class="font-semibold text-white">6 High-Rise Towers</strong> Designed Around The Horizon.
                 </p>
                 <div
                     class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 [animation-delay:450ms] mb-8">
@@ -152,7 +180,7 @@
                             <span class="absolute inset-x-0 bottom-0.5 h-[0.55em] -skew-x-6 bg-gradient-to-r from-gold-light to-gold"></span>
                             <span class="relative px-1.5 text-3xl sm:text-4xl font-semibold text-white tracking-tight [text-shadow:0_2px_6px_rgba(0,0,0,0.9)]">₹85.0 L</span>
                         </span>
-                        <span class="text-base sm:text-lg font-normal text-white/50">onwards</span>
+                        <span class="text-base sm:text-lg font-normal text-white/80">onwards</span>
                     </p>
                 </div>
                 <div class="flex flex-nowrap sm:flex-wrap items-center gap-3 sm:gap-6">
@@ -516,6 +544,127 @@
         </div>
     </section>
 
+    <section id="amenities" class="relative bg-white py-16 md:py-20">
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10">
+            <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">Amenities</p>
+            <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso mb-6">
+                Living <span class="text-gold">Amenities</span>
+            </h2>
+            <div class="w-16 h-px bg-gold-dark mb-10 md:mb-14"></div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-5">
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/parking.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Car Parking</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/fitness.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Gymnasium</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/energy-storage.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Power Backup</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/swimming.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Swimming Pool</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/playing.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Kid's Play Area</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/policeman.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Security</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/cctv-camera 1.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">24 x 7 CCTV</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/fire-exten.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Fire Safety</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/gate-1.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Gated Community</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/water-supply.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">24x7 Water Supply</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/elevator 1.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Lift</p>
+                </div>
+                <div class="group bg-white rounded-2xl border border-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-gold/40 transition-all duration-300 p-7 flex flex-col items-center text-center">
+                    <span class="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gold/10 group-hover:bg-gold/20 transition-colors duration-300">
+                        <img src="assets/images/amenities/solar-pannel.svg" alt="" loading="lazy" class="w-10 h-10">
+                    </span>
+                    <p class="text-sm text-espresso font-medium">Solar Panel</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 md:mt-14">
+                <a href="#contact" class="btn-shine btn1 !min-w-0 !px-7 !py-3 inline-flex items-center gap-2">
+                    <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
+                    <i class="ri-arrow-right-line text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <section id="cta" class="relative overflow-hidden min-h-[50vh] md:min-h-[40vh] flex items-center">
+        <span class="absolute top-0 inset-x-0 h-[2px] z-20 bg-gold-metallic"></span>
+        <div class="cta-parallax absolute inset-0">
+            <img src="assets/images/banner/orizon-bg.webp" alt="Orizon at dusk" loading="lazy" decoding="async"
+                width="1678" height="937" class="absolute w-full h-[140%] -top-[20%] object-cover object-center" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/80"></div>
+
+        <div class="relative z-10 max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-24 md:py-32 text-center">
+            <p class="text-xs md:text-sm text-gold-light font-medium mb-5">Limited Residences Available</p>
+            <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl !leading-[1.25] text-white mb-6">
+                Your Address <span class="block">Among The Clouds Awaits</span>
+            </h2>
+            <p class="text-white/80 text-base md:text-lg max-w-xl mx-auto mb-10 font-light">Step into a life designed around space, light, and the horizon. Schedule a private site visit and discover why Orizon is the Southern Bypass's most anticipated address.</p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="btn-shine btn1 !px-5 !py-2 sm:!px-6 sm:!py-2.5 inline-flex">
+                    <span class="text-sm font-medium tracking-wide font-serif">Schedule A Visit</span>
+                    <i class="ri-arrow-right-line text-sm"></i>
+                </a>
+                <a href="tel:+919330208558"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border border-white text-white hover:bg-white/10 transition-colors duration-300">
+                    <i class="ri-phone-fill text-sm"></i>
+                    <span class="text-sm font-medium tracking-wide font-serif">+91 9330208558</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="gallery" class="worlds-section relative bg-white py-12 md:py-20">
         <div class="worlds-heading relative max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 flex flex-wrap items-end justify-between gap-6 mb-12 md:mb-16">
             <div>
@@ -702,38 +851,8 @@
         </div>
     </section>
 
- 
-
-    <section id="cta" class="relative overflow-hidden min-h-[50vh] md:min-h-[40vh] flex items-center">
-        <span class="absolute top-0 inset-x-0 h-[2px] z-20 bg-gold-metallic"></span>
-        <div class="cta-parallax absolute inset-0">
-            <img src="assets/images/banner/orizon-bg.webp" alt="Orizon at dusk" loading="lazy" decoding="async"
-                width="1678" height="937" class="absolute w-full h-[140%] -top-[20%] object-cover object-center" />
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/80"></div>
-
-        <div class="relative z-10 max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-24 md:py-32 text-center">
-            <p class="text-xs md:text-sm text-gold-light font-medium mb-5">Limited Residences Available</p>
-            <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl !leading-[1.25] text-white mb-6">
-                Your Address <span class="block">Among The Clouds Awaits</span>
-            </h2>
-            <p class="text-white/80 text-base md:text-lg max-w-xl mx-auto mb-10 font-light">Step into a life designed around space, light, and the horizon. Schedule a private site visit and discover why Orizon is the Southern Bypass's most anticipated address.</p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#contact" class="btn-shine btn1 !px-5 !py-2 sm:!px-6 sm:!py-2.5 inline-flex">
-                    <span class="text-sm font-medium tracking-wide font-serif">Schedule A Visit</span>
-                    <i class="ri-arrow-right-line text-sm"></i>
-                </a>
-                <a href="tel:+10000000000"
-                    class="inline-flex items-center justify-center gap-2 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border border-white text-white hover:bg-white/10 transition-colors duration-300">
-                    <i class="ri-phone-fill text-sm"></i>
-                    <span class="text-sm font-medium tracking-wide font-serif">+1 (000) 000-0000</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-   <section id="faq" class="bg-ivory py-16 md:py-20">
+   
+ <section id="faq" class="bg-ivory py-16 md:py-20">
         <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
                 <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">FAQs</p>
@@ -744,31 +863,31 @@
                 <p class="text-muted text-base leading-relaxed mb-8 max-w-sm">Can't find the answer you're looking for? Reach out to our team directly and we'll be happy to help.</p>
 
                 <div class="space-y-5">
-                    <a href="tel:+10000000000" class="flex items-center gap-3 group">
+                    <a href="tel:+919330208558" class="flex items-center gap-3 group">
                         <span class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold-dark group-hover:bg-gold group-hover:text-ivory group-hover:border-gold transition-colors duration-200 shrink-0">
                             <i class="ri-phone-fill text-lg"></i>
                         </span>
                         <span>
                             <span class="block text-muted text-xs">Call Us</span>
-                            <span class="font-serif text-base text-espresso">+1 (000) 000-0000</span>
+                            <span class="font-serif text-base text-espresso">+91 9330208558</span>
                         </span>
                     </a>
-                    <a href="https://wa.me/10000000000" target="_blank" rel="noopener" class="flex items-center gap-3 group">
+                    <a href="https://wa.me/919330208558" target="_blank" rel="noopener" class="flex items-center gap-3 group">
                         <span class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold-dark group-hover:bg-gold group-hover:text-ivory group-hover:border-gold transition-colors duration-200 shrink-0">
                             <i class="ri-whatsapp-line text-lg"></i>
                         </span>
                         <span>
                             <span class="block text-muted text-xs">WhatsApp</span>
-                            <span class="font-serif text-base text-espresso">+1 (000) 000-0000</span>
+                            <span class="font-serif text-base text-espresso">+91 9330208558</span>
                         </span>
                     </a>
-                    <a href="mailto:info@orizon.com" class="flex items-center gap-3 group">
+                    <a href="mailto:optimumrealcon@gmail.com" class="flex items-center gap-3 group">
                         <span class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold-dark group-hover:bg-gold group-hover:text-ivory group-hover:border-gold transition-colors duration-200 shrink-0">
                             <i class="ri-mail-line text-lg"></i>
                         </span>
                         <span>
                             <span class="block text-muted text-xs">Email Us</span>
-                            <span class="font-serif text-base text-espresso">info@orizon.com</span>
+                            <span class="font-serif text-base text-espresso">optimumrealcon@gmail.com</span>
                         </span>
                     </a>
                 </div>
@@ -827,9 +946,151 @@
             </div>
         </div>
     </section>
+   
 
+     <section id="location" class="bg-white py-12 md:py-20">
+        <div class="relative max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 flex flex-wrap items-end justify-between gap-6 mb-12 md:mb-16">
+            <div>
+                <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">Location</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso">
+                    Find Us <span class="block text-gold">On The Map</span>
+                </h2>
+            </div>
+            <div class="inline-flex gap-1 p-1 rounded-full border border-gold/20 bg-white">
+                <button type="button" data-loc-tab="image"
+                    class="loc-tab-btn active px-5 py-2.5 rounded-full text-sm font-medium tracking-wide bg-gold text-ivory transition-colors duration-200">
+                    Map
+                </button>
+                <button type="button" data-loc-tab="google"
+                    class="loc-tab-btn px-5 py-2.5 rounded-full text-sm font-medium tracking-wide text-muted hover:text-espresso transition-colors duration-200">
+                    Google Map
+                </button>
+            </div>
+        </div>
 
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 text-center">
+            <p class="text-muted text-base leading-relaxed mb-10 max-w-2xl mx-auto">Orizon sits on an <strong class="text-espresso font-semibold">8.3-acre landmark site</strong> directly on <strong class="text-espresso font-semibold">Southern EM Bypass</strong>, with swift connectivity to Shahid Khudiram Metro, Garia, and South Kolkata hubs.</p>
 
+            <div id="loc-map-wrap" class="w-full">
+                <a id="loc-panel-image" href="assets/images/map/map.webp" data-fancybox="location-map"
+                    data-caption="Orizon Location Map" class="loc-panel block w-full">
+                    <img id="loc-map-img" src="assets/images/map/map.webp" alt="Orizon site location map"
+                        loading="lazy" decoding="async" class="w-full h-auto">
+                </a>
+                <iframe id="loc-panel-google"
+                    data-src="https://www.google.com/maps?q=Southern+EM+Bypass,+Garia,+Kolkata&output=embed"
+                    title="Orizon location on Google Maps" class="loc-panel hidden w-full"
+                    style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Southern+EM+Bypass+Garia+Kolkata"
+                target="_blank" rel="noopener" class="btn-shine btn1 !min-w-0 !px-6 !py-2.5 inline-flex items-center gap-2 mt-10">
+                <span class="text-sm font-medium tracking-wide font-serif">Get Directions</span>
+                <i class="ri-arrow-right-line text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+  
+
+    <footer id="site-footer" class="relative overflow-hidden text-ivory pb-20 lg:pb-0">
+        <img src="assets/images/banner/orizon-bg.webp" alt="" loading="lazy" decoding="async"
+            class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/85"></div>
+
+        <div class="relative border-b border-white/10">
+            <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-16 md:py-20 text-center">
+                <p class="text-xs md:text-sm text-gold-light font-medium mb-4">Ready When You Are</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-white mb-8">
+                    Let's Find Your Home <span class="block text-gold-light">At Orizon</span>
+                </h2>
+                <form id="footer-cta-form" class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:items-end gap-3 text-left">
+                    <div class="flex-1">
+                        <label class="block text-xs text-white/50 mb-1.5">Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required
+                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-gold-light transition-colors">
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-xs text-white/50 mb-1.5">Phone Number</label>
+                        <input type="tel" name="phone" placeholder="Enter your phone" required
+                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-gold-light transition-colors">
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-xs text-white/50 mb-1.5">Email</label>
+                        <input type="email" name="email" placeholder="Enter your email" required
+                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-gold-light transition-colors">
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-xs text-white/50 mb-1.5">Configuration</label>
+                        <select disabled
+                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white/60 cursor-not-allowed appearance-none">
+                            <option selected>3 BHK</option>
+                        </select>
+                        <input type="hidden" name="configuration" value="3 BHK">
+                    </div>
+                    <button type="submit"
+                        class="btn-shine btn1 w-full lg:w-auto !min-w-0 !px-7 !py-3 justify-center">
+                        <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
+                        <i class="ri-arrow-right-line text-sm"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="relative max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <img src="assets/images/logo/main-logo.webp" alt="Orizon" class="h-14 w-auto mb-4">
+                <p class="text-sm text-ivory/60 leading-relaxed max-w-xs">A landmark residential township by Srijan Realty on Southern EM Bypass, Kolkata.</p>
+            </div>
+
+            <div>
+                <p class="text-white font-serif text-lg mb-4">Quick Links</p>
+                <ul class="space-y-2.5 text-sm text-ivory/60">
+                    <li><a href="#home" class="hover:text-gold-light transition-colors">Home</a></li>
+                    <li><a href="#overview" class="hover:text-gold-light transition-colors">Overview</a></li>
+                    <li><a href="#features" class="hover:text-gold-light transition-colors">Features</a></li>
+                    <li><a href="#floor-plans" class="hover:text-gold-light transition-colors">Floor Plans</a></li>
+                    <li><a href="#gallery" class="hover:text-gold-light transition-colors">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="text-white font-serif text-lg mb-4">Contact Us</p>
+                <p class="text-sm text-ivory/60 leading-relaxed mb-4">Address - 2nd Floor, 3108, Rajdanga Main Road, Plot 47, EB Block, Kolkata, West Bengal 700107</p>
+                <p class="text-sm text-ivory/60 leading-relaxed mb-4">Site Address - 76, B.C. Roy Road (Jagaddal), PS – Sonarpur, PO- Dakshin Jagaddal, Kolkata - 700151</p>
+                <p class="text-sm text-ivory/60 mb-2">Toll Free - <a href="tel:+919330208558" class="hover:text-gold-light transition-colors">+91 9330208558</a></p>
+                <p class="text-sm text-ivory/60">Email - <a href="mailto:optimumrealcon@gmail.com" class="hover:text-gold-light transition-colors">optimumrealcon@gmail.com</a></p>
+            </div>
+
+            <div>
+                <p class="text-white font-serif text-lg mb-4">Channel Partner</p>
+                <div class="inline-flex items-center bg-white rounded-xl px-4 py-3">
+                    <img src="assets/images/logo/cp-logo.svg" alt="Channel Partner" class="h-9 w-auto">
+                </div>
+            </div>
+        </div>
+
+        <div class="relative border-t border-white/10">
+            <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-5 text-center">
+                <p class="text-sm text-ivory/70 font-medium">Phase I - WBRERA/P/SOU/2026/004474 | <a href="https://rera.wb.gov.in" target="_blank" rel="noopener" class="hover:text-gold-light transition-colors">rera.wb.gov.in</a></p>
+            </div>
+        </div>
+
+        <div class="relative border-t border-white/10">
+            <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-ivory/50">
+                <p>&copy; 2026 Orizon. All rights reserved.</p>
+                <div class="flex items-center gap-5">
+                    <a href="#" class="hover:text-gold-light transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold-light transition-colors">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+
+        <p aria-hidden="true"
+            class="relative select-none pointer-events-none text-center font-serif font-bold leading-none whitespace-nowrap -mb-[0.14em] bg-gradient-to-b from-white/25 via-white/10 to-transparent bg-clip-text text-transparent text-[22vw] lg:text-[11rem] 3xl:text-[20rem]">
+            ORIZON
+        </p>
+    </footer>
 
 
     <div id="video-modal" class="hidden fixed inset-0 z-[100] items-center justify-center bg-black/80 backdrop-blur-sm p-4">
@@ -842,7 +1103,65 @@
         </div>
     </div>
 
-    
+    <div id="enquiry-modal" class="hidden fixed inset-0 z-[110]">
+        <div id="enquiry-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <div id="enquiry-overlay" class="absolute inset-0 flex items-end md:items-center justify-center md:p-6">
+            <div id="enquiry-panel"
+                class="relative bg-white w-full md:max-w-4xl rounded-t-3xl md:rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] md:max-h-[85vh] overflow-y-auto md:grid md:grid-cols-2">
+                <button id="enquiry-close" type="button" aria-label="Close"
+                    class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory transition-colors duration-200">
+                    <i class="ri-close-line text-lg"></i>
+                </button>
+
+                <div class="hidden md:block relative">
+                    <img src="assets/images/banner/orizon-bg.webp" alt="Orizon at dusk" class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8 text-white">
+                        <p class="text-xs tracking-wider text-gold-light font-medium mb-3">Orizon</p>
+                        <h3 class="font-serif text-2xl !leading-[1.3]">Live Limitlessly <span class="block">On The Southern Bypass</span></h3>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 md:p-10">
+                    <p class="text-xs md:text-sm text-gold-dark font-medium mb-2">Get In Touch</p>
+                    <h3 id="enquiry-heading" class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-2 !leading-[1.3]">Request A Callback</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Share your details and our team will get back to you shortly.</p>
+
+                    <form id="enquiry-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs text-muted mb-1.5">Full Name</label>
+                            <input type="text" name="name" required placeholder="Enter your name"
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-muted mb-1.5">Phone Number</label>
+                            <input type="tel" name="phone" required placeholder="Enter your phone number"
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-muted mb-1.5">Email</label>
+                            <input type="email" name="email" required placeholder="Enter your email"
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-muted mb-1.5">Configuration</label>
+                            <select disabled
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-muted bg-ivory/60 cursor-not-allowed appearance-none">
+                                <option selected>3 BHK</option>
+                            </select>
+                            <input type="hidden" name="configuration" value="3 BHK">
+                        </div>
+                        <button type="submit"
+                            class="btn-shine btn1 w-full !min-w-0 !px-6 !py-3 justify-center mt-2">
+                            <span class="text-sm font-medium tracking-wide font-serif">Submit Enquiry</span>
+                            <i class="ri-arrow-right-line text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
