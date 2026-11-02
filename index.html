@@ -80,7 +80,7 @@
 
             <div class="flex items-center gap-4">
                 <a href="tel:+919330208558" aria-label="Call us"
-                    class="relative hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-gold text-ivory">
+                    class="relative flex items-center justify-center w-11 h-11 rounded-full bg-gold text-ivory">
                     <span class="absolute inline-flex h-8 w-8 rounded-full bg-gold opacity-75 animate-ping"></span>
                     <i class="ri-phone-fill relative text-lg"></i>
                 </a>
@@ -137,7 +137,7 @@
         </div>
     </div>
 
-    <div id="sticky-cta-mobile" class="lg:hidden fixed bottom-0 inset-x-0 z-[80] flex h-16 shadow-[0_-4px_16px_rgba(0,0,0,0.12)]">
+    <div id="sticky-cta-mobile" class="md:hidden fixed bottom-0 inset-x-0 z-[80] flex h-16 shadow-[0_-4px_16px_rgba(0,0,0,0.12)]">
         <a href="https://wa.me/919330208558" target="_blank" rel="noopener"
             class="flex-1 flex items-center justify-center gap-2 bg-[#0c9d41] text-white text-base font-medium tracking-wide">
             WhatsApp
@@ -147,6 +147,12 @@
             <i class="ri-arrow-right-line text-base"></i>
         </a>
     </div>
+
+    <a href="https://wa.me/919330208558" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+        class="hidden md:flex fixed bottom-6 right-6 z-[80] items-center justify-center w-16 h-16">
+        <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping"></span>
+        <img src="assets/images/amenities/whatsapp.svg" alt="" class="relative w-16 h-16 drop-shadow-lg">
+    </a>
 
     <section id="home" class="relative overflow-hidden sm:min-h-screen h-svh sm:pb-0 pb-14 flex sm:items-center items-end">
         <div class="hero-bg absolute inset-0 bg-cover sm:bg-top bg-center bg-no-repeat" style="
