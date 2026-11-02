@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orizon</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        "3xl": "1600px",
+                    },
+                    colors: {
+                        ivory: "#FBF8F3",
+                        espresso: "#2B2420",
+                        muted: "#6B5F4F",
+                        gold: { light: "#D9BE8E", DEFAULT: "#B08D57", dark: "#8C6D3F" },
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', "serif"],
+                        sans: ['"DM Sans"', "sans-serif"],
+                    },
+                    backgroundImage: {
+                        "gold-metallic":
+                            "linear-gradient(180deg, #FFF5E4 0%, #E2BA7D 45%, #B28243 100%)",
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            "0%": { opacity: 0, transform: "translateY(18px)" },
+                            "100%": { opacity: 1, transform: "translateY(0)" },
+                        },
+                    },
+                    animation: {
+                        "fade-up": "fadeUp 0.8s ease-out forwards",
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.2.0/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-white font-sans text-espresso">
+    <header id="site-header" class="absolute top-0 inset-x-0 z-50 bg-transparent text-white border-b border-transparent transition-all duration-300">
+        <nav class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
+            <a href="#home" class="shrink-0">
+                <img id="logo-img" src="assets/images/logo/hori-logo.png" alt="Orizon" width="1282" height="302" class="h-10 w-auto" />
+            </a>
+
+            <ul id="nav-pill" class="hidden lg:flex items-center gap-2 text-sm tracking-wider px-1.5 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/15 drop-shadow transition-colors duration-300">
+                <li>
+                    <a href="#home" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Home</a>
+                </li>
+                <li>
+                    <a href="#overview" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Overview</a>
+                </li>
+                <li>
+                    <a href="#features" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Features</a>
+                </li>
+                <li>
+                    <a href="#floor-plans" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Floor Plans</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Gallery</a>
+                </li>
+                <li>
+                    <a href="#contact" class="px-3 2xl:px-4 py-2 rounded-full hover:bg-white/25 transition-colors duration-200">Contact</a>
+                </li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+10000000000" aria-label="Call us"
+                    class="relative hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-gold text-ivory">
+                    <span class="absolute inline-flex h-8 w-8 rounded-full bg-gold opacity-75 animate-ping"></span>
+                    <i class="ri-phone-fill relative text-lg"></i>
+                </a>
+                <a href="#contact" class="btn-shine btn1 hidden sm:inline-flex !min-w-0 !py-2.5 !px-5">
+                    <span class="text-sm font-medium">Enquire Now</span>
+                </a>
+                <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center text-2xl">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+            </div>
+        </nav>
+
+        <ul id="mobile-menu" class="hidden lg:hidden flex-col gap-1 px-6 pb-6 text-sm">
+            <li>
+                <a href="#home" class="block py-2 hover:text-gold transition-colors">Home</a>
+            </li>
+            <li>
+                <a href="#overview" class="block py-2 hover:text-gold transition-colors">Overview</a>
+            </li>
+            <li>
+                <a href="#features" class="block py-2 hover:text-gold transition-colors">Features</a>
+            </li>
+            <li>
+                <a href="#amenities" class="block py-2 hover:text-gold transition-colors">Amenities</a>
+            </li>
+            <li>
+                <a href="#floor-plans" class="block py-2 hover:text-gold transition-colors">Floor Plans</a>
+            </li>
+            <li>
+                <a href="#gallery" class="block py-2 hover:text-gold transition-colors">Gallery</a>
+            </li>
+            <li>
+                <a href="#contact" class="block py-2 hover:text-gold transition-colors">Contact</a>
+            </li>
+            <li class="pt-2">
+                <a href="#contact" class="btn-shine btn1 !px-5 !py-2 w-full">
+                    <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <section id="home" class="relative overflow-hidden sm:min-h-screen h-svh sm:pb-0 pb-14 flex sm:items-center items-end">
+        <div class="hero-bg absolute inset-0 bg-cover sm:bg-top bg-center bg-no-repeat" style="
+        background-image: url(&quot;assets/images/banner/orizon-bg.webp&quot;);
+      "></div>
+        <div class="absolute sm:block hidden inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/70 via-black/30 to-black/0"></div>
+        <div class="absolute sm:hidden block inset-0 bg-black/60"></div>
+        
+        <div class="relative max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 pt-0">
+            <div class="max-w-2xl">
+                <p
+                    class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 text-gold-light tracking-wider text-base mb-4 font-medium">
+                    Welcome to
+                </p>
+                <h1
+                    class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 [animation-delay:150ms] font-serif font-light text-3xl md:text-6xl lg:text-5xl !leading-[1.25] mb-6">
+                    <span class="text-white drop-shadow-sm">A New Way Of Living</span>
+                    <span
+                        class="block bg-gradient-to-b from-[#FFF5E4] via-[#fff7ec] to-[#B28243] bg-clip-text text-transparent">Takes Shape In <strong class="font-semibold">Orizon.</strong></span>
+                </h1>
+                <p
+                    class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 [animation-delay:300ms] text-white/75 text-base md:text-lg mb-6 max-w-md font-light">
+                    Spread Across <strong class="font-semibold text-white">8.3 Acres</strong>, With <strong class="font-semibold text-white">80% Open Space</strong> And <strong class="font-semibold text-white">6 High-Rise Towers</strong> Designed Around The Horizon. ̰
+                </p>
+                <div
+                    class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 [animation-delay:450ms] mb-8">
+                    <p class="text-xs text-white mb-2">Starting From</p>
+                    <p class="flex items-baseline gap-2.5">
+                        <span class="relative inline-block">
+                            <span class="absolute inset-x-0 bottom-0.5 h-[0.55em] -skew-x-6 bg-gradient-to-r from-gold-light to-gold"></span>
+                            <span class="relative px-1.5 text-3xl sm:text-4xl font-semibold text-white tracking-tight [text-shadow:0_2px_6px_rgba(0,0,0,0.9)]">₹85.0 L</span>
+                        </span>
+                        <span class="text-base sm:text-lg font-normal text-white/50">onwards</span>
+                    </p>
+                </div>
+                <div class="flex flex-nowrap sm:flex-wrap items-center gap-3 sm:gap-6">
+                    <button class="btn-shine btn1 !px-5 !py-2 sm:!px-10 sm:!py-3">
+                        <span class="text-sm sm:text-lg capitalize font-light tracking-wide font-serif">Enquiry Now</span>
+                        <i class="ri-arrow-right-line text-sm sm:text-lg"></i>
+                    </button>
+
+                    <button type="button" id="watch-video-btn" class="group inline-flex items-center gap-2.5 sm:gap-4 text-white">
+                        <span
+                            class="flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-gold-light/50 bg-white/5 backdrop-blur-sm transition-colors duration-300 group-hover:border-gold-light group-hover:bg-gold-light/10">
+                            <i class="ri-play-fill text-base sm:text-lg text-gold-light translate-x-0.5"></i>
+                        </span>
+                        <span class="flex flex-col items-start">
+                            <span class="font-serif text-sm sm:text-base tracking-wide transition-colors duration-300 group-hover:text-gold-light">Watch
+                                Video</span>
+                            <span class="mt-1.5 h-px w-6 sm:w-8 bg-gold-light/50 transition-all duration-300 group-hover:w-12"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-white py-8 sm:py-12">
+        <span class="absolute top-0 inset-x-0 h-[2px] bg-gold-metallic"></span>
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10">
+            <div class="grid grid-cols-2 xl:grid-cols-5 lg:grid-cols-3  gap-y-8 gap-x-6 lg:divide-x lg:divide-gold/15">
+                <div class="flex items-center gap-4 lg:px-5 lg:first:pl-0">
+                    <span class="flex-none w-14 h-14 rounded-full bg-white ring-1 ring-gold/25 shadow-sm flex items-center justify-center p-3">
+                        <img src="assets/images/features/possesion.svg" alt="Possession" width="483" height="483" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+                    </span>
+                    <div>
+                        <p class="text-lg lg:text-base xl:text-xl font-semibold text-espresso font-serif">Mar 2031</p>
+                        <p class="text-xs uppercase tracking-wider text-muted mt-1">Possession</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 lg:px-5">
+                    <span class="flex-none w-14 h-14 rounded-full bg-white ring-1 ring-gold/25 shadow-sm flex items-center justify-center p-3">
+                        <img src="assets/images/features/tower.svg" alt="Towers" width="543" height="543" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+                    </span>
+                    <div>
+                        <p class="text-lg lg:text-base xl:text-xl font-semibold text-espresso font-serif">6</p>
+                        <p class="text-xs uppercase tracking-wider text-muted mb-1">No. of Towers</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 lg:px-5">
+                    <span class="flex-none w-14 h-14 rounded-full bg-white ring-1 ring-gold/25 shadow-sm flex items-center justify-center p-3">
+                        <img src="assets/images/features/area 1.svg" alt="Project Area" width="512" height="512" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+                    </span>
+                    <div>
+                        <p class="text-lg lg:text-base xl:text-xl font-semibold text-espresso font-serif">8.3 Acres</p>
+                        <p class="text-xs uppercase tracking-wider text-muted mt-1">Project Area</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 lg:px-5">
+                    <span class="flex-none w-14 h-14 rounded-full bg-white ring-1 ring-gold/25 shadow-sm flex items-center justify-center p-3">
+                        <img src="assets/images/features/blueprint 1.svg" alt="Configuration" width="510" height="510" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+                    </span>
+                    <div>
+                        <p class="text-lg lg:text-base xl:text-xl font-semibold text-espresso font-serif">3 BHK</p>
+                        <p class="text-xs uppercase tracking-wider text-muted mt-1">Configuration</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 lg:px-5 lg:last:pr-0">
+                    <span class="flex-none w-14 h-14 rounded-full bg-white ring-1 ring-gold/25 shadow-sm flex items-center justify-center p-3">
+                        <img src="assets/images/features/bu-area.svg" alt="BU Area" width="512" height="512" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+                    </span>
+                    <div>
+                        <p class="text-lg lg:text-base xl:text-xl font-semibold text-espresso font-serif">1236 - 1993 sq ft</p>
+                        <p class="text-xs uppercase tracking-wider text-muted mt-1">BU Area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="bg-[#F9FBE7] pb-8 sm:py-20">
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="order-2 lg:order-1">
+                <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">Project Overview</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso mb-6">
+                    A Landmark Address <span class="block text-gold">on the Southern Bypass</span>
+                </h2>
+                <div class="w-16 h-px bg-gold-dark mb-6"></div>
+                <p class="text-muted text-base xl:text-lg leading-relaxed mb-8 max-w-xl">
+                    Orizon is a landmark <strong class="text-espresso font-semibold">8.3-acre</strong> luxury
+                    residential township by Srijan Realty situated directly on Southern EM Bypass. Designed around
+                    nature and modern convenience, the project features <strong
+                        class="text-espresso font-semibold">6 iconic high-rise towers</strong> (G+28 to G+33) offering
+                    spacious <strong class="text-espresso font-semibold">3 BHK</strong> residences with <strong
+                        class="text-espresso font-semibold">80% open green space</strong>. Every home features
+                    expansive terrace balconies, paired with <strong class="text-espresso font-semibold">IGBC
+                        Platinum</strong> pre-certified eco-friendly architecture and swift connectivity to Shahid
+                    Khudiram Metro, Garia, and South Kolkata hubs.
+                </p>
+                <a href="assets/brochure/orizon-brochure.pdf" download class="btn-shine btn1 inline-block !px-5 !py-2 sm:!px-10 sm:!py-3">
+                    <span class="text-sm sm:text-base font-medium tracking-wide font-serif">Download Brochure</span>
+                    <i class="ri-download-2-line text-sm sm:text-lg"></i>
+                </a>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <img src="assets/images/about/about-img.webp" alt="Orizon Overview" width="837" height="800"
+                    loading="lazy" decoding="async" class="relative w-full h-[420px] md:h-[520px] object-cover" />
+                <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,#F9FBE7_0%,transparent_20%,transparent_80%,#F9FBE7_100%),linear-gradient(to_right,#F9FBE7_0%,transparent_15%,transparent_85%,#F9FBE7_100%)]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-8 md:py-20 overflow-hidden">
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10">
+            <div class="flex flex-wrap items-end justify-between gap-6 mb-10 md:mb-14">
+                <div>
+                    <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">Why Orizon</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso">
+                        Five Reasons Life Feels <span class="block text-gold">Different At Orizon</span>
+                    </h2>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button id="reasons-prev" aria-label="Previous reason"
+                        class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                        <i class="ri-arrow-left-line text-lg"></i>
+                    </button>
+                    <button id="reasons-next" aria-label="Next reason"
+                        class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                        <i class="ri-arrow-right-line text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper reasons-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide h-auto">
+                        <div class="relative h-[260px] sm:h-[300px] rounded-2xl overflow-hidden">
+                            <img src="assets/images/features/acre-area.webp" loading="lazy" decoding="async"
+                                alt="8.3 Acres With 6.6 Acres of Open Space" width="1065" height="600" class="absolute inset-0 w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-6">
+                                <h3 class="font-serif text-xl text-white mb-2 !leading-[1.3]">8.3 Acres With 6.6 Acres of Open Space</h3>
+                                <p class="text-white/75 text-sm leading-relaxed">More greenery, more breathing room, and more freedom to live beyond four walls.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div class="relative h-[260px] sm:h-[300px] rounded-2xl overflow-hidden">
+                            <img src="assets/images/features/dual-access.webp" loading="lazy" decoding="async"
+                                alt="Dual Access From Southern EM Bypass" width="1065" height="600" class="absolute inset-0 w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-6">
+                                <h3 class="font-serif text-xl text-white mb-2 !leading-[1.3]">Dual Access From Southern EM Bypass</h3>
+                                <p class="text-white/75 text-sm leading-relaxed">Two convenient entry points ensure faster, easier connectivity to Kolkata's key destinations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div class="relative h-[260px] sm:h-[300px] rounded-2xl overflow-hidden">
+                            <img src="assets/images/features/club-house.webp" loading="lazy" decoding="async"
+                                alt="33,000+ Sq. Ft. Luxury Clubhouse" width="1065" height="600" class="absolute inset-0 w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-6">
+                                <h3 class="font-serif text-xl text-white mb-2 !leading-[1.3]">33,000+ Sq. Ft. Luxury Clubhouse</h3>
+                                <p class="text-white/75 text-sm leading-relaxed">A resort-inspired lifestyle with an infinity pool, jacuzzi, spa, co-working spaces, and entertainment zones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div class="relative h-[260px] sm:h-[300px] rounded-2xl overflow-hidden">
+                            <img src="assets/images/features/guest-bedroom.webp" loading="lazy" decoding="async"
+                                alt="Dedicated Guest Bedrooms" width="1065" height="600" class="absolute inset-0 w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-6">
+                                <h3 class="font-serif text-xl text-white mb-2 !leading-[1.3]">Dedicated Guest Bedrooms</h3>
+                                <p class="text-white/75 text-sm leading-relaxed">Thoughtfully planned guest suites so every visitor feels at home, without compromising your privacy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div class="relative h-[260px] sm:h-[300px] rounded-2xl overflow-hidden">
+                            <img src="assets/images/features/igc.webp" loading="lazy" decoding="async"
+                                alt="IGBC Platinum Pre-Certified" width="1065" height="600" class="absolute inset-0 w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-6">
+                                <h3 class="font-serif text-xl text-white mb-2 !leading-[1.3]">IGBC Platinum Pre-Certified</h3>
+                                <p class="text-white/75 text-sm leading-relaxed">Eco-conscious architecture engineered for energy efficiency, natural light, and sustainable living.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination !relative !mt-8"></div>
+            </div>
+
+            <div class="flex justify-center mt-6 md:mt-8">
+                <a href="#overview" class="btn-shine min-w-0 btn1 inline-block !px-5 !py-2 sm:!px-10 sm:!py-3">
+                    <span class="text-sm sm:text-base font-medium tracking-wide font-serif">Learn More</span>
+                    <i class="ri-arrow-right-line text-sm sm:text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="floor-plans" class="bg-ivory py-16 md:py-20">
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+                <div>
+                    <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">Floor Plans</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso mb-6">
+                        Explore The Layout <span class="block text-gold">Of Every Tower</span>
+                    </h2>
+                    <div class="inline-flex flex-wrap gap-1 p-1 rounded-full border border-gold/20 bg-white mb-10 md:mb-14">
+                        <button type="button" data-plan-tab="master"
+                            class="plan-tab-btn active px-5 py-2.5 rounded-full text-sm font-medium tracking-wide bg-gold text-ivory transition-colors duration-200">
+                            Master Plan
+                        </button>
+                        <button type="button" data-plan-tab="tower-4"
+                            class="plan-tab-btn px-5 py-2.5 rounded-full text-sm font-medium tracking-wide text-muted hover:text-espresso transition-colors duration-200">
+                            Tower 4
+                        </button>
+                        <button type="button" data-plan-tab="tower-5"
+                            class="plan-tab-btn px-5 py-2.5 rounded-full text-sm font-medium tracking-wide text-muted hover:text-espresso transition-colors duration-200">
+                            Tower 5
+                        </button>
+                    </div>
+
+                    <div id="plan-left-master" class="plan-left-panel">
+                        <p class="text-xs text-gold-dark tracking-wide font-medium mb-3">Master Plan</p>
+                        <h3 class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-4 !leading-[1.3]">A Thoughtfully Planned Community</h3>
+                        <p class="text-muted text-sm md:text-base leading-relaxed mb-8 max-w-md">Planned with just <strong class="text-espresso font-semibold">6 residential towers</strong> and <strong class="text-espresso font-semibold">702 residences</strong>, Orizon creates a more private and balanced living experience. Thoughtfully positioned <strong class="text-espresso font-semibold">lifestyle zones, landscaped greens, and dedicated recreation spaces</strong> ensure every corner feels purposeful and connected.</p>
+                        <a href="assets/images/floor-plan/master-plan.webp" download class="btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2">
+                            <span class="text-sm font-medium tracking-wide font-serif">Get Full Floor Plan</span>
+                            <i class="ri-download-2-line text-base"></i>
+                        </a>
+                    </div>
+
+                    <div id="plan-left-tower-4" class="plan-left-panel hidden">
+                        <p class="text-xs text-gold-dark tracking-wide font-medium mb-3">Available Configurations</p>
+                        <h3 class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-3 !leading-[1.3]">Tower 4 Floor Plans</h3>
+                        <p class="text-muted text-sm md:text-base leading-relaxed mb-7 max-w-md">Pick a layout to preview, then enquire to unlock the detailed plan.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <button type="button" data-tower="4" data-img="assets/images/floor-plan/2d/4-a.webp" data-label="A" data-config="3BHK+3T" data-area="1615 Sq. Ft."
+                                class="plan-type-btn active bg-gold text-ivory border-gold px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type A</button>
+                            <button type="button" data-tower="4" data-img="assets/images/floor-plan/2d/4-b.webp" data-label="B" data-config="3BHK+2T" data-area="1236 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type B</button>
+                            <button type="button" data-tower="4" data-img="assets/images/floor-plan/2d/4-c.webp" data-label="C" data-config="3BHK+3T+S.Q" data-area="1842 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type C</button>
+                            <button type="button" data-tower="4" data-img="assets/images/floor-plan/2d/4-d.webp" data-label="D" data-config="3BHK+3T+S.Q" data-area="1845 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type D</button>
+                            <button type="button" data-tower="4" data-img="assets/images/floor-plan/2d/4-e.webp" data-label="E" data-config="3BHK+2T" data-area="1236 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type E</button>
+                            <button type="button" data-tower="4" data-img="assets/images/floor-plan/2d/4-f.webp" data-label="F" data-config="3BHK+3T+S.Q" data-area="1708 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type F</button>
+                        </div>
+                        <p class="plan-type-info text-sm text-muted mt-4"><span class="text-espresso font-semibold">3BHK+3T</span> &middot; 1615 Sq. Ft.</p>
+                        <a href="#contact" class="btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2 mt-7">
+                            <i class="ri-lock-2-fill text-base"></i>
+                            <span class="text-sm font-medium tracking-wide font-serif">Get Floor Plan</span>
+                        </a>
+                    </div>
+
+                    <div id="plan-left-tower-5" class="plan-left-panel hidden">
+                        <p class="text-xs text-gold-dark tracking-wide font-medium mb-3">Available Configurations</p>
+                        <h3 class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-3 !leading-[1.3]">Tower 5 Floor Plans</h3>
+                        <p class="text-muted text-sm md:text-base leading-relaxed mb-7 max-w-md">Pick a layout to preview, then enquire to unlock the detailed plan.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <button type="button" data-tower="5" data-img="assets/images/floor-plan/2d/5-a.webp" data-label="A" data-config="3BHK+2T" data-area="1343 Sq. Ft."
+                                class="plan-type-btn active bg-gold text-ivory border-gold px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type A</button>
+                            <button type="button" data-tower="5" data-img="assets/images/floor-plan/2d/5-b.webp" data-label="B" data-config="3BHK+2T" data-area="1236 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type B</button>
+                            <button type="button" data-tower="5" data-img="assets/images/floor-plan/2d/5-c.webp" data-label="C" data-config="3BHK+2T" data-area="1469 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type C</button>
+                            <button type="button" data-tower="5" data-img="assets/images/floor-plan/2d/5-d.webp" data-label="D" data-config="3BHK+2T" data-area="1469 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type D</button>
+                            <button type="button" data-tower="5" data-img="assets/images/floor-plan/2d/5-e.webp" data-label="E" data-config="3BHK+2T" data-area="1236 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type E</button>
+                            <button type="button" data-tower="5" data-img="assets/images/floor-plan/2d/5-f.webp" data-label="F" data-config="3BHK+2T" data-area="1464 Sq. Ft."
+                                class="plan-type-btn border-gold/25 text-espresso hover:border-gold/50 px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-200">Type F</button>
+                        </div>
+                        <p class="plan-type-info text-sm text-muted mt-4"><span class="text-espresso font-semibold">3BHK+2T</span> &middot; 1343 Sq. Ft.</p>
+                        <a href="#contact" class="btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2 mt-7">
+                            <i class="ri-lock-2-fill text-base"></i>
+                            <span class="text-sm font-medium tracking-wide font-serif">Get Floor Plan</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="plan-right-master" class="plan-right-panel relative">
+                        <div class="absolute -inset-3 rounded-[1.75rem] border border-gold/30 pointer-events-none"></div>
+                        <div class="relative rounded-2xl overflow-hidden border border-gold/15 shadow-xl bg-white p-3 sm:p-4">
+                            <a href="assets/images/floor-plan/master-plan.webp" data-fancybox="master-plan"
+                                data-caption="Orizon Master Plan" class="group relative block cursor-zoom-in">
+                                <img src="assets/images/floor-plan/master-plan.webp" loading="lazy" decoding="async"
+                                    width="864" height="700" alt="Orizon Master Plan"
+                                    class="w-full aspect-[864/700] object-contain rounded-xl" />
+                                <span class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-espresso/80 text-ivory flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    <i class="ri-zoom-in-line text-lg"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="plan-right-tower-4" class="plan-right-panel hidden relative">
+                        <div class="absolute -inset-3 rounded-[1.75rem] border border-gold/30 pointer-events-none"></div>
+                        <div class="relative rounded-2xl overflow-hidden border border-gold/15 shadow-xl bg-[#EDE7DD]">
+                            <span class="absolute top-5 left-5 z-10 px-3.5 py-1.5 rounded-full bg-espresso text-ivory text-xs font-semibold tracking-widest">TYPE <span class="plan-type-label">A</span></span>
+                            <div class="aspect-square sm:aspect-[4/3]">
+                                <img class="plan-display-img blur-lg select-none w-full h-full object-contain p-6"
+                                    src="assets/images/floor-plan/2d/4-a.webp" loading="lazy" decoding="async"
+                                    width="1080" height="1080" alt="Tower 4 floor plan" />
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-white/55 backdrop-blur-[2px]">
+                                <div class="text-center px-6">
+                                    <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold text-ivory shadow-sm mb-4">
+                                        <i class="ri-lock-2-fill text-2xl"></i>
+                                    </span>
+                                    <p class="font-serif text-lg md:text-xl text-espresso mb-1">Unlock This Layout</p>
+                                    <p class="text-muted text-sm mb-5 max-w-xs mx-auto">Enquire to view the detailed floor plan.</p>
+                                    <a href="#contact" class="btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2">
+                                        <i class="ri-lock-2-fill text-base"></i>
+                                        <span class="text-sm font-medium tracking-wide font-serif">Get Floor Plan</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="plan-right-tower-5" class="plan-right-panel hidden relative">
+                        <div class="absolute -inset-3 rounded-[1.75rem] border border-gold/30 pointer-events-none"></div>
+                        <div class="relative rounded-2xl overflow-hidden border border-gold/15 shadow-xl bg-[#EDE7DD]">
+                            <span class="absolute top-5 left-5 z-10 px-3.5 py-1.5 rounded-full bg-espresso text-ivory text-xs font-semibold tracking-widest">TYPE <span class="plan-type-label">A</span></span>
+                            <div class="aspect-square sm:aspect-[4/3]">
+                                <img class="plan-display-img blur-lg select-none w-full h-full object-contain p-6"
+                                    src="assets/images/floor-plan/2d/5-a.webp" loading="lazy" decoding="async"
+                                    width="1080" height="1080" alt="Tower 5 floor plan" />
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-white/55 backdrop-blur-[2px]">
+                                <div class="text-center px-6">
+                                    <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold text-ivory shadow-sm mb-4">
+                                        <i class="ri-lock-2-fill text-2xl"></i>
+                                    </span>
+                                    <p class="font-serif text-lg md:text-xl text-espresso mb-1">Unlock This Layout</p>
+                                    <p class="text-muted text-sm mb-5 max-w-xs mx-auto">Enquire to view the detailed floor plan.</p>
+                                    <a href="#contact" class="btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2">
+                                        <i class="ri-lock-2-fill text-base"></i>
+                                        <span class="text-sm font-medium tracking-wide font-serif">Get Floor Plan</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="worlds-section relative bg-white py-12 md:py-20">
+        <div class="worlds-heading relative max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 flex flex-wrap items-end justify-between gap-6 mb-12 md:mb-16">
+            <div>
+                <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">Gallery</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso">
+                    Every Angle <span class="block text-gold">Of Orizon Living</span>
+                </h2>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="gallery-prev" aria-label="Previous image"
+                    class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                    <i class="ri-arrow-left-line text-lg"></i>
+                </button>
+                <button id="gallery-next" aria-label="Next image"
+                    class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                    <i class="ri-arrow-right-line text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="pointer-events-none absolute inset-y-0 left-0 w-1/5 md:w-1/4 z-10 bg-gradient-to-r from-white to-transparent"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 w-1/5 md:w-1/4 z-10 bg-gradient-to-l from-white to-transparent"></div>
+
+            <div class="pointer-events-none absolute inset-0 z-20 max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto">
+                <div class="gallery-intro hidden lg:flex absolute inset-y-0 left-0 w-[320px] xl:w-[380px] flex-col justify-center pl-6 lg:pl-10 transition-opacity duration-500">
+                    
+                    <p class="text-muted text-base leading-relaxed max-w-sm mb-6">From sunlit interiors to landscaped greens, every frame tells a story of thoughtful design. Explore homes crafted with <strong class="text-espresso font-semibold">premium finishes</strong>, <strong class="text-espresso font-semibold">abundant natural light</strong>, and seamless indoor-outdoor living that make everyday life feel extraordinary.</p>
+                    <a href="assets/brochure/orizon-brochure.pdf" download class="pointer-events-auto btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2 self-start">
+                        <span class="text-sm font-medium tracking-wide font-serif">Download Brochure</span>
+                        <i class="ri-download-2-line text-base"></i>
+                    </a>
+                </div>
+
+                <div class="gallery-outro hidden lg:flex absolute inset-y-0 right-0 w-[320px] xl:w-[380px] flex-col items-end justify-center text-right pr-6 lg:pr-10 opacity-0 transition-opacity duration-500">
+                   
+                    <p class="text-muted text-base leading-relaxed max-w-sm mb-6">Numbers and photos only tell half the story. Book a private site visit, walk through a live sample unit, and experience the <strong class="text-espresso font-semibold">craftsmanship</strong> and <strong class="text-espresso font-semibold">premium amenities</strong> that define everyday life at Orizon.</p>
+                    <a href="assets/brochure/orizon-brochure.pdf" download class="pointer-events-auto btn-shine btn1 !px-6 !py-2.5 inline-flex items-center gap-2 self-end">
+                        <span class="text-sm font-medium tracking-wide font-serif">Download Brochure</span>
+                        <i class="ri-download-2-line text-base"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="worlds-swiper swiper">
+                <div class="swiper-wrapper !items-center pb-4">
+                    <div class="swiper-slide gallery-slide !w-[235px] sm:!w-[350px] md:!w-[400px] lg:!w-[430px] xl:!w-[470px] 2xl:!w-[510px]">
+                        <div class="gallery-card h-[170px] sm:h-[255px] md:h-[285px] lg:h-[305px] xl:h-[330px] 2xl:h-[365px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/entrance.webp" data-fancybox="worlds-gallery"
+                                data-caption="Grand Entrance" class="block w-full h-full">
+                                <img src="assets/images/amenities/entrance.webp" loading="lazy" decoding="async"
+                                    alt="Grand Entrance" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[215px] sm:!w-[325px] md:!w-[365px] lg:!w-[390px] xl:!w-[430px] 2xl:!w-[460px]">
+                        <div class="gallery-card h-[155px] sm:h-[235px] md:h-[260px] lg:h-[280px] xl:h-[305px] 2xl:h-[330px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/pool.webp" data-fancybox="worlds-gallery"
+                                data-caption="Swimming Pool" class="block w-full h-full">
+                                <img src="assets/images/amenities/pool.webp" loading="lazy" decoding="async"
+                                    alt="Swimming Pool" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[195px] sm:!w-[290px] md:!w-[330px] lg:!w-[360px] xl:!w-[390px] 2xl:!w-[415px]">
+                        <div class="gallery-card h-[140px] sm:h-[215px] md:h-[240px] lg:h-[260px] xl:h-[280px] 2xl:h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/water-body.webp" data-fancybox="worlds-gallery"
+                                data-caption="Water Body" class="block w-full h-full">
+                                <img src="assets/images/amenities/water-body.webp" loading="lazy" decoding="async"
+                                    alt="Water Body" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[235px] sm:!w-[350px] md:!w-[400px] lg:!w-[430px] xl:!w-[470px] 2xl:!w-[510px]">
+                        <div class="gallery-card h-[170px] sm:h-[255px] md:h-[285px] lg:h-[305px] xl:h-[330px] 2xl:h-[365px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/Amphitheatre.webp" data-fancybox="worlds-gallery"
+                                data-caption="Amphitheatre" class="block w-full h-full">
+                                <img src="assets/images/amenities/Amphitheatre.webp" loading="lazy" decoding="async"
+                                    alt="Amphitheatre" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[215px] sm:!w-[325px] md:!w-[365px] lg:!w-[390px] xl:!w-[430px] 2xl:!w-[460px]">
+                        <div class="gallery-card h-[155px] sm:h-[235px] md:h-[260px] lg:h-[280px] xl:h-[305px] 2xl:h-[330px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/yoga.webp" data-fancybox="worlds-gallery"
+                                data-caption="Yoga Deck" class="block w-full h-full">
+                                <img src="assets/images/amenities/yoga.webp" loading="lazy" decoding="async"
+                                    alt="Yoga Deck" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[195px] sm:!w-[290px] md:!w-[330px] lg:!w-[360px] xl:!w-[390px] 2xl:!w-[415px]">
+                        <div class="gallery-card h-[140px] sm:h-[215px] md:h-[240px] lg:h-[260px] xl:h-[280px] 2xl:h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/gym.webp" data-fancybox="worlds-gallery"
+                                data-caption="Fitness Gym" class="block w-full h-full">
+                                <img src="assets/images/amenities/gym.webp" loading="lazy" decoding="async"
+                                    alt="Fitness Gym" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[235px] sm:!w-[350px] md:!w-[400px] lg:!w-[430px] xl:!w-[470px] 2xl:!w-[510px]">
+                        <div class="gallery-card h-[170px] sm:h-[255px] md:h-[285px] lg:h-[305px] xl:h-[330px] 2xl:h-[365px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/squash-court.webp" data-fancybox="worlds-gallery"
+                                data-caption="Squash Court" class="block w-full h-full">
+                                <img src="assets/images/amenities/squash-court.webp" loading="lazy" decoding="async"
+                                    alt="Squash Court" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[215px] sm:!w-[325px] md:!w-[365px] lg:!w-[390px] xl:!w-[430px] 2xl:!w-[460px]">
+                        <div class="gallery-card h-[155px] sm:h-[235px] md:h-[260px] lg:h-[280px] xl:h-[305px] 2xl:h-[330px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/court.webp" data-fancybox="worlds-gallery"
+                                data-caption="Sports Court" class="block w-full h-full">
+                                <img src="assets/images/amenities/court.webp" loading="lazy" decoding="async"
+                                    alt="Sports Court" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[195px] sm:!w-[290px] md:!w-[330px] lg:!w-[360px] xl:!w-[390px] 2xl:!w-[415px]">
+                        <div class="gallery-card h-[140px] sm:h-[215px] md:h-[240px] lg:h-[260px] xl:h-[280px] 2xl:h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/indoor-games.webp" data-fancybox="worlds-gallery"
+                                data-caption="Indoor Games Room" class="block w-full h-full">
+                                <img src="assets/images/amenities/indoor-games.webp" loading="lazy" decoding="async"
+                                    alt="Indoor Games Room" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[235px] sm:!w-[350px] md:!w-[400px] lg:!w-[430px] xl:!w-[470px] 2xl:!w-[510px]">
+                        <div class="gallery-card h-[170px] sm:h-[255px] md:h-[285px] lg:h-[305px] xl:h-[330px] 2xl:h-[365px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/Bar.webp" data-fancybox="worlds-gallery"
+                                data-caption="Bar Lounge" class="block w-full h-full">
+                                <img src="assets/images/amenities/Bar.webp" loading="lazy" decoding="async"
+                                    alt="Bar Lounge" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[215px] sm:!w-[325px] md:!w-[365px] lg:!w-[390px] xl:!w-[430px] 2xl:!w-[460px]">
+                        <div class="gallery-card h-[155px] sm:h-[235px] md:h-[260px] lg:h-[280px] xl:h-[305px] 2xl:h-[330px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/boomerang_seating.webp" data-fancybox="worlds-gallery"
+                                data-caption="Boomerang Seating" class="block w-full h-full">
+                                <img src="assets/images/amenities/boomerang_seating.webp" loading="lazy" decoding="async"
+                                    alt="Boomerang Seating" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[195px] sm:!w-[290px] md:!w-[330px] lg:!w-[360px] xl:!w-[390px] 2xl:!w-[415px]">
+                        <div class="gallery-card h-[140px] sm:h-[215px] md:h-[240px] lg:h-[260px] xl:h-[280px] 2xl:h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/kids-garden.webp" data-fancybox="worlds-gallery"
+                                data-caption="Kids Garden" class="block w-full h-full">
+                                <img src="assets/images/amenities/kids-garden.webp" loading="lazy" decoding="async"
+                                    alt="Kids Garden" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[235px] sm:!w-[350px] md:!w-[400px] lg:!w-[430px] xl:!w-[470px] 2xl:!w-[510px]">
+                        <div class="gallery-card h-[170px] sm:h-[255px] md:h-[285px] lg:h-[305px] xl:h-[330px] 2xl:h-[365px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/playing-area.webp" data-fancybox="worlds-gallery"
+                                data-caption="Kids Playing Area" class="block w-full h-full">
+                                <img src="assets/images/amenities/playing-area.webp" loading="lazy" decoding="async"
+                                    alt="Kids Playing Area" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[215px] sm:!w-[325px] md:!w-[365px] lg:!w-[390px] xl:!w-[430px] 2xl:!w-[460px]">
+                        <div class="gallery-card h-[155px] sm:h-[235px] md:h-[260px] lg:h-[280px] xl:h-[305px] 2xl:h-[330px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/senior-citizen-room.webp" data-fancybox="worlds-gallery"
+                                data-caption="Senior Citizen Room" class="block w-full h-full">
+                                <img src="assets/images/amenities/senior-citizen-room.webp" loading="lazy" decoding="async"
+                                    alt="Senior Citizen Room" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide gallery-slide !w-[195px] sm:!w-[290px] md:!w-[330px] lg:!w-[360px] xl:!w-[390px] 2xl:!w-[415px]">
+                        <div class="gallery-card h-[140px] sm:h-[215px] md:h-[240px] lg:h-[260px] xl:h-[280px] 2xl:h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gold/20 bg-white">
+                            <a href="assets/images/amenities/ground.webp" data-fancybox="worlds-gallery"
+                                data-caption="Open Grounds" class="block w-full h-full">
+                                <img src="assets/images/amenities/ground.webp" loading="lazy" decoding="async"
+                                    alt="Open Grounds" class="w-full h-full object-cover" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <section id="cta" class="relative overflow-hidden min-h-[50vh] md:min-h-[40vh] flex items-center">
+        <span class="absolute top-0 inset-x-0 h-[2px] z-20 bg-gold-metallic"></span>
+        <div class="cta-parallax absolute inset-0">
+            <img src="assets/images/banner/orizon-bg.webp" alt="Orizon at dusk" loading="lazy" decoding="async"
+                width="1678" height="937" class="absolute w-full h-[140%] -top-[20%] object-cover object-center" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/80"></div>
+
+        <div class="relative z-10 max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-24 md:py-32 text-center">
+            <p class="text-xs md:text-sm text-gold-light font-medium mb-5">Limited Residences Available</p>
+            <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl !leading-[1.25] text-white mb-6">
+                Your Address <span class="block">Among The Clouds Awaits</span>
+            </h2>
+            <p class="text-white/80 text-base md:text-lg max-w-xl mx-auto mb-10 font-light">Step into a life designed around space, light, and the horizon. Schedule a private site visit and discover why Orizon is the Southern Bypass's most anticipated address.</p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="btn-shine btn1 !px-5 !py-2 sm:!px-6 sm:!py-2.5 inline-flex">
+                    <span class="text-sm font-medium tracking-wide font-serif">Schedule A Visit</span>
+                    <i class="ri-arrow-right-line text-sm"></i>
+                </a>
+                <a href="tel:+10000000000"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border border-white text-white hover:bg-white/10 transition-colors duration-300">
+                    <i class="ri-phone-fill text-sm"></i>
+                    <span class="text-sm font-medium tracking-wide font-serif">+1 (000) 000-0000</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <section id="faq" class="bg-ivory py-16 md:py-20">
+        <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+                <p class="text-xs md:text-sm text-gold-dark font-medium mb-4">FAQs</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-espresso mb-6">
+                    Questions You May <span class="block text-gold">Have In Mind</span>
+                </h2>
+                <div class="w-16 h-px bg-gold-dark mb-6"></div>
+                <p class="text-muted text-base leading-relaxed mb-8 max-w-sm">Can't find the answer you're looking for? Reach out to our team directly and we'll be happy to help.</p>
+
+                <div class="space-y-5">
+                    <a href="tel:+10000000000" class="flex items-center gap-3 group">
+                        <span class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold-dark group-hover:bg-gold group-hover:text-ivory group-hover:border-gold transition-colors duration-200 shrink-0">
+                            <i class="ri-phone-fill text-lg"></i>
+                        </span>
+                        <span>
+                            <span class="block text-muted text-xs">Call Us</span>
+                            <span class="font-serif text-base text-espresso">+1 (000) 000-0000</span>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/10000000000" target="_blank" rel="noopener" class="flex items-center gap-3 group">
+                        <span class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold-dark group-hover:bg-gold group-hover:text-ivory group-hover:border-gold transition-colors duration-200 shrink-0">
+                            <i class="ri-whatsapp-line text-lg"></i>
+                        </span>
+                        <span>
+                            <span class="block text-muted text-xs">WhatsApp</span>
+                            <span class="font-serif text-base text-espresso">+1 (000) 000-0000</span>
+                        </span>
+                    </a>
+                    <a href="mailto:info@orizon.com" class="flex items-center gap-3 group">
+                        <span class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold-dark group-hover:bg-gold group-hover:text-ivory group-hover:border-gold transition-colors duration-200 shrink-0">
+                            <i class="ri-mail-line text-lg"></i>
+                        </span>
+                        <span>
+                            <span class="block text-muted text-xs">Email Us</span>
+                            <span class="font-serif text-base text-espresso">info@orizon.com</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="divide-y divide-gold/20 border-t border-b border-gold/20">
+                <div class="faq-item active">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left" aria-expanded="true">
+                        <span class="font-serif text-lg md:text-xl text-espresso">Where is Orizon located?</span>
+                        <i class="faq-icon ri-subtract-line text-xl text-gold-dark shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-panel">
+                        <p class="text-muted text-base leading-relaxed pb-5 pr-10">Orizon sits on an <strong class="text-espresso font-semibold">8.3-acre landmark site</strong> directly on <strong class="text-espresso font-semibold">Southern EM Bypass</strong>, with swift connectivity to Shahid Khudiram Metro, Garia, and South Kolkata hubs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left" aria-expanded="false">
+                        <span class="font-serif text-lg md:text-xl text-espresso">What configurations are available?</span>
+                        <i class="faq-icon ri-add-line text-xl text-gold-dark shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-panel hidden">
+                        <p class="text-muted text-base leading-relaxed pb-5 pr-10">Orizon offers spacious <strong class="text-espresso font-semibold">3 BHK residences</strong> across <strong class="text-espresso font-semibold">6 iconic high-rise towers</strong> (G+28 to G+33), each with expansive terrace balconies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left" aria-expanded="false">
+                        <span class="font-serif text-lg md:text-xl text-espresso">What amenities does Orizon offer?</span>
+                        <i class="faq-icon ri-add-line text-xl text-gold-dark shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-panel hidden">
+                        <p class="text-muted text-base leading-relaxed pb-5 pr-10">Residents enjoy a <strong class="text-espresso font-semibold">33,000+ sq. ft. luxury clubhouse</strong> with an infinity pool, jacuzzi, spa, co-working spaces, and entertainment zones, set within <strong class="text-espresso font-semibold">80% open green space</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left" aria-expanded="false">
+                        <span class="font-serif text-lg md:text-xl text-espresso">Is Orizon RERA registered?</span>
+                        <i class="faq-icon ri-add-line text-xl text-gold-dark shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-panel hidden">
+                        <p class="text-muted text-base leading-relaxed pb-5 pr-10">Yes, Orizon is developed by <strong class="text-espresso font-semibold">Srijan Realty</strong> and is <strong class="text-espresso font-semibold">RERA registered</strong>. Registration details are available on request and will be shared during your site visit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left" aria-expanded="false">
+                        <span class="font-serif text-lg md:text-xl text-espresso">How can I schedule a site visit?</span>
+                        <i class="faq-icon ri-add-line text-xl text-gold-dark shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-panel hidden">
+                        <p class="text-muted text-base leading-relaxed pb-5 pr-10">Simply use the <strong class="text-espresso font-semibold">"Schedule A Visit"</strong> button on this page or call us directly, and our team will arrange a private tour at your convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div id="video-modal" class="hidden fixed inset-0 z-[100] items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="relative w-full max-w-3xl aspect-video">
+            <button id="video-modal-close" aria-label="Close video"
+                class="absolute -top-10 right-0 text-white text-2xl hover:text-gold transition-colors">
+                <i class="ri-close-line"></i>
+            </button>
+            <div id="video-modal-frame" class="w-full h-full rounded-xl overflow-hidden shadow-2xl"></div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.2.0/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

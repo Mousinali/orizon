@@ -1,0 +1,249 @@
+- generic [active] [ref=f22e1]:
+  - banner [ref=f22e2]:
+    - navigation [ref=f22e3]:
+      - link [ref=f22e4] [cursor=pointer]:
+        - /url: "#home"
+        - img "Orizon" [ref=f22e5]
+      - list [ref=f22e6]:
+        - listitem [ref=f22e7]:
+          - link "Home" [ref=f22e8] [cursor=pointer]:
+            - /url: "#home"
+        - listitem [ref=f22e9]:
+          - link "Overview" [ref=f22e10] [cursor=pointer]:
+            - /url: "#overview"
+        - listitem [ref=f22e11]:
+          - link "Features" [ref=f22e12] [cursor=pointer]:
+            - /url: "#features"
+        - listitem [ref=f22e13]:
+          - link "Floor Plans" [ref=f22e14] [cursor=pointer]:
+            - /url: "#floor-plans"
+        - listitem [ref=f22e15]:
+          - link "Gallery" [ref=f22e16] [cursor=pointer]:
+            - /url: "#gallery"
+        - listitem [ref=f22e17]:
+          - link "Contact" [ref=f22e18] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=f22e19]:
+        - link "Call us" [ref=f22e20] [cursor=pointer]:
+          - /url: tel:+10000000000
+          - generic [ref=f22e22]: 
+        - link "Enquire Now" [ref=f22e23] [cursor=pointer]:
+          - /url: "#contact"
+        - text: 
+  - generic [ref=f22e28]:
+    - paragraph [ref=f22e29]: Welcome to
+    - heading [level=1] [ref=f22e30]:
+      - text: A New Way Of Living
+      - generic [ref=f22e31]:
+        - text: Takes Shape In
+        - strong [ref=f22e32]: Orizon.
+    - paragraph [ref=f22e33]:
+      - text: Spread Across
+      - strong [ref=f22e34]: 8.3 Acres
+      - text: ", With"
+      - strong [ref=f22e35]: 80% Open Space
+      - text: And
+      - strong [ref=f22e36]: 6 High-Rise Towers
+      - text: Designed Around The Horizon. ̰
+    - generic [ref=f22e37]:
+      - button "Enquiry Now " [ref=f22e38] [cursor=pointer]:
+        - generic [ref=f22e39]: Enquiry Now
+        - generic [ref=f22e40]: 
+      - button " Watch Video" [ref=f22e41] [cursor=pointer]:
+        - generic [ref=f22e42]: 
+        - generic [ref=f22e44]: Watch Video
+  - generic [ref=f22e50]:
+    - generic [ref=f22e51]:
+      - img "Possession" [ref=f22e53]
+      - generic [ref=f22e54]:
+        - paragraph [ref=f22e55]: Mar 2031
+        - paragraph [ref=f22e56]: Possession
+    - generic [ref=f22e57]:
+      - img "Towers" [ref=f22e59]
+      - generic [ref=f22e60]:
+        - paragraph [ref=f22e61]: "6"
+        - paragraph [ref=f22e62]: No. of Towers
+    - generic [ref=f22e63]:
+      - img "Project Area" [ref=f22e65]
+      - generic [ref=f22e66]:
+        - paragraph [ref=f22e67]: 8.3 Acres
+        - paragraph [ref=f22e68]: Project Area
+    - generic [ref=f22e69]:
+      - img "Configuration" [ref=f22e71]
+      - generic [ref=f22e72]:
+        - paragraph [ref=f22e73]: 3 BHK
+        - paragraph [ref=f22e74]: Configuration
+    - generic [ref=f22e75]:
+      - img "BU Area" [ref=f22e77]
+      - generic [ref=f22e78]:
+        - paragraph [ref=f22e79]: 1236 - 1993 sq ft
+        - paragraph [ref=f22e80]: BU Area
+  - generic [ref=f22e82]:
+    - generic [ref=f22e83]:
+      - paragraph [ref=f22e84]: Project Overview
+      - heading "A Landmark Address on the Southern Bypass" [level=2] [ref=f22e85]:
+        - text: A Landmark Address
+        - generic [ref=f22e86]: on the Southern Bypass
+      - paragraph [ref=f22e88]:
+        - text: Orizon is a landmark
+        - strong [ref=f22e89]: 8.3-acre
+        - text: luxury residential township by Srijan Realty situated directly on Southern EM Bypass. Designed around nature and modern convenience, the project features
+        - strong [ref=f22e90]: 6 iconic high-rise towers
+        - text: (G+28 to G+33) offering spacious
+        - strong [ref=f22e91]: 3 BHK
+        - text: residences with
+        - strong [ref=f22e92]: 80% open green space
+        - text: . Every home features expansive terrace balconies, paired with
+        - strong [ref=f22e93]: IGBC Platinum
+        - text: pre-certified eco-friendly architecture and swift connectivity to Shahid Khudiram Metro, Garia, and South Kolkata hubs.
+      - link "Download Brochure " [ref=f22e94] [cursor=pointer]:
+        - /url: assets/brochure/orizon-brochure.pdf
+        - text: Download Brochure
+        - generic [ref=f22e95]: 
+    - img "Orizon Overview" [ref=f22e97]
+  - generic [ref=f22e99]:
+    - generic [ref=f22e100]:
+      - generic [ref=f22e101]:
+        - paragraph [ref=f22e102]: Why Orizon
+        - heading "Five Reasons Life Feels Different At Orizon" [level=2] [ref=f22e103]:
+          - text: Five Reasons Life Feels
+          - generic [ref=f22e104]: Different At Orizon
+      - generic [ref=f22e105]:
+        - button "Previous slide" [disabled] [ref=f22e106]:
+          - generic [ref=f22e107]: 
+        - button "Next slide" [ref=f22e108] [cursor=pointer]:
+          - generic [ref=f22e109]: 
+    - generic [ref=f22e110]:
+      - generic [ref=f22e111]:
+        - group "1 / 5" [ref=f22e112]:
+          - generic [ref=f22e113]:
+            - img "8.3 Acres With 6.6 Acres of Open Space" [ref=f22e114]
+            - generic [ref=f22e116]:
+              - heading "8.3 Acres With 6.6 Acres of Open Space" [level=3] [ref=f22e117]
+              - paragraph [ref=f22e118]: More greenery, more breathing room, and more freedom to live beyond four walls.
+        - group "2 / 5" [ref=f22e119]:
+          - generic [ref=f22e120]:
+            - img "Dual Access From Southern EM Bypass" [ref=f22e121]
+            - generic [ref=f22e123]:
+              - heading "Dual Access From Southern EM Bypass" [level=3] [ref=f22e124]
+              - paragraph [ref=f22e125]: Two convenient entry points ensure faster, easier connectivity to Kolkata's key destinations.
+        - group "3 / 5" [ref=f22e126]:
+          - generic [ref=f22e127]:
+            - img "33,000+ Sq. Ft. Luxury Clubhouse" [ref=f22e128]
+            - generic [ref=f22e130]:
+              - heading "33,000+ Sq. Ft. Luxury Clubhouse" [level=3] [ref=f22e131]
+              - paragraph [ref=f22e132]: A resort-inspired lifestyle with an infinity pool, jacuzzi, spa, co-working spaces, and entertainment zones.
+        - group "4 / 5" [ref=f22e133]:
+          - generic [ref=f22e134]:
+            - img "Dedicated Guest Bedrooms" [ref=f22e135]
+            - generic [ref=f22e137]:
+              - heading "Dedicated Guest Bedrooms" [level=3] [ref=f22e138]
+              - paragraph [ref=f22e139]: Thoughtfully planned guest suites so every visitor feels at home, without compromising your privacy.
+        - group "5 / 5" [ref=f22e140]:
+          - generic [ref=f22e141]:
+            - img "IGBC Platinum Pre-Certified" [ref=f22e142]
+            - generic [ref=f22e144]:
+              - heading "IGBC Platinum Pre-Certified" [level=3] [ref=f22e145]
+              - paragraph [ref=f22e146]: Eco-conscious architecture engineered for energy efficiency, natural light, and sustainable living.
+      - generic [ref=f22e147]:
+        - button "Go to slide 1" [ref=f22e148] [cursor=pointer]
+        - button "Go to slide 2" [ref=f22e149] [cursor=pointer]
+        - button "Go to slide 3" [ref=f22e150] [cursor=pointer]
+    - link "Learn More " [ref=f22e152] [cursor=pointer]:
+      - /url: "#overview"
+      - text: Learn More
+      - generic [ref=f22e153]: 
+  - generic [ref=f22e156]:
+    - generic [ref=f22e157]:
+      - paragraph [ref=f22e158]: Floor Plans
+      - heading "Explore The Layout Of Every Tower" [level=2] [ref=f22e159]:
+        - text: Explore The Layout
+        - generic [ref=f22e160]: Of Every Tower
+      - generic [ref=f22e161]:
+        - button "Master Plan" [ref=f22e162] [cursor=pointer]
+        - button "Tower 4" [ref=f22e163] [cursor=pointer]
+        - button "Tower 5" [ref=f22e164] [cursor=pointer]
+      - generic [ref=f22e165]:
+        - paragraph [ref=f22e166]: Master Plan
+        - heading "A Thoughtfully Planned Community" [level=3] [ref=f22e167]
+        - paragraph [ref=f22e168]:
+          - text: Planned with just
+          - strong [ref=f22e169]: 6 residential towers
+          - text: and
+          - strong [ref=f22e170]: 702 residences
+          - text: ", Orizon creates a more private and balanced living experience. Thoughtfully positioned"
+          - strong [ref=f22e171]: lifestyle zones, landscaped greens, and dedicated recreation spaces
+          - text: ensure every corner feels purposeful and connected.
+        - link "Get Full Floor Plan " [ref=f22e172] [cursor=pointer]:
+          - /url: assets/images/floor-plan/master-plan.webp
+          - generic [ref=f22e173]: Get Full Floor Plan
+          - generic [ref=f22e174]: 
+      - text:  
+    - generic [ref=f22e175]:
+      - link "Orizon Master Plan " [ref=f22e178]:
+        - /url: assets/images/floor-plan/master-plan.webp
+        - img "Orizon Master Plan" [ref=f22e179]
+        - generic [ref=f22e180]: 
+      - text:    
+  - generic [ref=f22e182]:
+    - generic [ref=f22e183]:
+      - generic [ref=f22e184]:
+        - paragraph [ref=f22e185]: Gallery
+        - heading "Every Angle Of Orizon Living" [level=2] [ref=f22e186]:
+          - text: Every Angle
+          - generic [ref=f22e187]: Of Orizon Living
+      - generic [ref=f22e188]:
+        - button "Previous slide" [disabled] [ref=f22e189]:
+          - generic [ref=f22e190]: 
+        - button "Next slide" [ref=f22e191] [cursor=pointer]:
+          - generic [ref=f22e192]: 
+    - generic [ref=f22e193]:
+      - generic:
+        - generic:
+          - paragraph:
+            - text: From sunlit interiors to landscaped greens, every frame tells a story of thoughtful design. Explore homes crafted with
+            - strong: premium finishes
+            - text: ","
+            - strong: abundant natural light
+            - text: ", and seamless indoor-outdoor living that make everyday life feel extraordinary."
+          - link "Download Brochure " [ref=f22e194] [cursor=pointer]:
+            - /url: assets/brochure/orizon-brochure.pdf
+            - generic [ref=f22e195]: Download Brochure
+            - generic [ref=f22e196]: 
+        - generic:
+          - paragraph:
+            - text: Numbers and photos only tell half the story. Book a private site visit, walk through a live sample unit, and experience the
+            - strong: craftsmanship
+            - text: and
+            - strong: premium amenities
+            - text: that define everyday life at Orizon.
+          - link "Download Brochure " [ref=f22e197] [cursor=pointer]:
+            - /url: assets/brochure/orizon-brochure.pdf
+            - generic [ref=f22e198]: Download Brochure
+            - generic [ref=f22e199]: 
+      - generic [ref=f22e201]:
+        - group "1 / 3" [ref=f22e202]:
+          - link [ref=f22e204] [cursor=pointer]:
+            - /url: assets/images/features/guest-bedroom.webp
+            - img "Orizon interiors" [ref=f22e205]
+        - group "2 / 3" [ref=f22e206]:
+          - link [ref=f22e208] [cursor=pointer]:
+            - /url: assets/images/features/acre-area.webp
+            - img "Orizon open space" [ref=f22e209]
+        - group "3 / 3" [ref=f22e210]:
+          - link [ref=f22e212] [cursor=pointer]:
+            - /url: assets/images/banner/orizon-bg.webp
+            - img "Orizon exterior" [ref=f22e213]
+  - generic [ref=f22e214]:
+    - img "Orizon at dusk" [ref=f22e217]
+    - generic [ref=f22e219]:
+      - paragraph [ref=f22e220]: Limited Residences Available
+      - heading "Your Address Among The Clouds Awaits" [level=2] [ref=f22e221]:
+        - text: Your Address
+        - generic [ref=f22e222]: Among The Clouds Awaits
+      - paragraph [ref=f22e223]: Step into a life designed around space, light, and the horizon. Schedule a private site visit and discover why Orizon is the Southern Bypass's most anticipated address.
+      - link "Schedule A Visit " [ref=f22e224] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=f22e225]: Schedule A Visit
+        - generic [ref=f22e226]: 
+  - text: 

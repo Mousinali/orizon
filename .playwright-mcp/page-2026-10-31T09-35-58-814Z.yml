@@ -1,0 +1,223 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - navigation [ref=f12e3]:
+      - link [ref=f12e4] [cursor=pointer]:
+        - /url: "#home"
+        - img "Orizon" [ref=f12e5]
+      - list [ref=f12e6]:
+        - listitem [ref=f12e7]:
+          - link "Home" [ref=f12e8] [cursor=pointer]:
+            - /url: "#home"
+        - listitem [ref=f12e9]:
+          - link "Overview" [ref=f12e10] [cursor=pointer]:
+            - /url: "#overview"
+        - listitem [ref=f12e11]:
+          - link "Features" [ref=f12e12] [cursor=pointer]:
+            - /url: "#features"
+        - listitem [ref=f12e13]:
+          - link "Floor Plans" [ref=f12e14] [cursor=pointer]:
+            - /url: "#floor-plans"
+        - listitem [ref=f12e15]:
+          - link "Gallery" [ref=f12e16] [cursor=pointer]:
+            - /url: "#gallery"
+        - listitem [ref=f12e17]:
+          - link "Contact" [ref=f12e18] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=f12e19]:
+        - link "Call us" [ref=f12e20] [cursor=pointer]:
+          - /url: tel:+10000000000
+          - generic [ref=f12e22]: 
+        - link "Enquire Now" [ref=f12e23] [cursor=pointer]:
+          - /url: "#contact"
+        - text: 
+  - generic [ref=f12e28]:
+    - paragraph [ref=f12e29]: Welcome to
+    - heading [level=1] [ref=f12e30]:
+      - text: A New Way Of Living
+      - generic [ref=f12e31]:
+        - text: Takes Shape In
+        - strong [ref=f12e32]: Orizon.
+    - paragraph [ref=f12e33]:
+      - text: Spread Across
+      - strong [ref=f12e34]: 8.3 Acres
+      - text: ", With"
+      - strong [ref=f12e35]: 80% Open Space
+      - text: And
+      - strong [ref=f12e36]: 6 High-Rise Towers
+      - text: Designed Around The Horizon. ̰
+    - generic [ref=f12e37]:
+      - button "Enquiry Now " [ref=f12e38] [cursor=pointer]:
+        - generic [ref=f12e39]: Enquiry Now
+        - generic [ref=f12e40]: 
+      - button " Watch Video" [ref=f12e41] [cursor=pointer]:
+        - generic [ref=f12e42]: 
+        - generic [ref=f12e44]: Watch Video
+  - generic [ref=f12e50]:
+    - generic [ref=f12e51]:
+      - img "Possession" [ref=f12e53]
+      - generic [ref=f12e54]:
+        - paragraph [ref=f12e55]: Mar 2031
+        - paragraph [ref=f12e56]: Possession
+    - generic [ref=f12e57]:
+      - img "Towers" [ref=f12e59]
+      - generic [ref=f12e60]:
+        - paragraph [ref=f12e61]: "6"
+        - paragraph [ref=f12e62]: No. of Towers
+    - generic [ref=f12e63]:
+      - img "Project Area" [ref=f12e65]
+      - generic [ref=f12e66]:
+        - paragraph [ref=f12e67]: 8.3 Acres
+        - paragraph [ref=f12e68]: Project Area
+    - generic [ref=f12e69]:
+      - img "Configuration" [ref=f12e71]
+      - generic [ref=f12e72]:
+        - paragraph [ref=f12e73]: 3 BHK
+        - paragraph [ref=f12e74]: Configuration
+    - generic [ref=f12e75]:
+      - img "BU Area" [ref=f12e77]
+      - generic [ref=f12e78]:
+        - paragraph [ref=f12e79]: 1236 - 1993 sq ft
+        - paragraph [ref=f12e80]: BU Area
+  - generic [ref=f12e82]:
+    - generic [ref=f12e83]:
+      - paragraph [ref=f12e84]: Project Overview
+      - heading "A Landmark Address on the Southern Bypass" [level=2] [ref=f12e85]:
+        - text: A Landmark Address
+        - generic [ref=f12e86]: on the Southern Bypass
+      - paragraph [ref=f12e88]:
+        - text: Orizon is a landmark
+        - strong [ref=f12e89]: 8.3-acre
+        - text: luxury residential township by Srijan Realty situated directly on Southern EM Bypass. Designed around nature and modern convenience, the project features
+        - strong [ref=f12e90]: 6 iconic high-rise towers
+        - text: (G+28 to G+33) offering spacious
+        - strong [ref=f12e91]: 3 BHK
+        - text: residences with
+        - strong [ref=f12e92]: 80% open green space
+        - text: . Every home features expansive terrace balconies, paired with
+        - strong [ref=f12e93]: IGBC Platinum
+        - text: pre-certified eco-friendly architecture and swift connectivity to Shahid Khudiram Metro, Garia, and South Kolkata hubs.
+      - link "Download Brochure " [ref=f12e94] [cursor=pointer]:
+        - /url: assets/brochure/orizon-brochure.pdf
+        - text: Download Brochure
+        - generic [ref=f12e95]: 
+    - img "Orizon Overview" [ref=f12e97]
+  - generic [ref=f12e99]:
+    - generic [ref=f12e100]:
+      - generic [ref=f12e101]:
+        - paragraph [ref=f12e102]: Why Orizon
+        - heading "Five Reasons Life Feels Different At Orizon" [level=2] [ref=f12e103]:
+          - text: Five Reasons Life Feels
+          - generic [ref=f12e104]: Different At Orizon
+      - generic [ref=f12e105]:
+        - button "Previous slide" [disabled] [ref=f12e106]:
+          - generic [ref=f12e107]: 
+        - button "Next slide" [ref=f12e108] [cursor=pointer]:
+          - generic [ref=f12e109]: 
+    - generic [ref=f12e110]:
+      - generic [ref=f12e111]:
+        - group "1 / 5" [ref=f12e112]:
+          - generic [ref=f12e113]:
+            - img "8.3 Acres With 6.6 Acres of Open Space" [ref=f12e114]
+            - generic [ref=f12e116]:
+              - heading "8.3 Acres With 6.6 Acres of Open Space" [level=3] [ref=f12e117]
+              - paragraph [ref=f12e118]: More greenery, more breathing room, and more freedom to live beyond four walls.
+        - group "2 / 5" [ref=f12e119]:
+          - generic [ref=f12e120]:
+            - img "Dual Access From Southern EM Bypass" [ref=f12e121]
+            - generic [ref=f12e123]:
+              - heading "Dual Access From Southern EM Bypass" [level=3] [ref=f12e124]
+              - paragraph [ref=f12e125]: Two convenient entry points ensure faster, easier connectivity to Kolkata's key destinations.
+        - group "3 / 5" [ref=f12e126]:
+          - generic [ref=f12e127]:
+            - img "33,000+ Sq. Ft. Luxury Clubhouse" [ref=f12e128]
+            - generic [ref=f12e130]:
+              - heading "33,000+ Sq. Ft. Luxury Clubhouse" [level=3] [ref=f12e131]
+              - paragraph [ref=f12e132]: A resort-inspired lifestyle with an infinity pool, jacuzzi, spa, co-working spaces, and entertainment zones.
+        - group "4 / 5" [ref=f12e133]:
+          - generic [ref=f12e134]:
+            - img "Dedicated Guest Bedrooms" [ref=f12e135]
+            - generic [ref=f12e137]:
+              - heading "Dedicated Guest Bedrooms" [level=3] [ref=f12e138]
+              - paragraph [ref=f12e139]: Thoughtfully planned guest suites so every visitor feels at home, without compromising your privacy.
+        - group "5 / 5" [ref=f12e140]:
+          - generic [ref=f12e141]:
+            - img "IGBC Platinum Pre-Certified" [ref=f12e142]
+            - generic [ref=f12e144]:
+              - heading "IGBC Platinum Pre-Certified" [level=3] [ref=f12e145]
+              - paragraph [ref=f12e146]: Eco-conscious architecture engineered for energy efficiency, natural light, and sustainable living.
+      - generic [ref=f12e147]:
+        - button "Go to slide 1" [ref=f12e148] [cursor=pointer]
+        - button "Go to slide 2" [ref=f12e149] [cursor=pointer]
+        - button "Go to slide 3" [ref=f12e150] [cursor=pointer]
+    - link "Learn More " [ref=f12e152] [cursor=pointer]:
+      - /url: "#overview"
+      - text: Learn More
+      - generic [ref=f12e153]: 
+  - generic [ref=f12e156]:
+    - generic [ref=f12e157]:
+      - paragraph [ref=f12e158]: Floor Plans
+      - heading "Explore The Layout Of Every Tower" [level=2] [ref=f12e159]:
+        - text: Explore The Layout
+        - generic [ref=f12e160]: Of Every Tower
+      - generic [ref=f12e161]:
+        - button "Master Plan" [ref=f12e162] [cursor=pointer]
+        - button "Tower 4" [ref=f12e163] [cursor=pointer]
+        - button "Tower 5" [ref=f12e164] [cursor=pointer]
+      - generic [ref=f12e165]:
+        - paragraph [ref=f12e166]: Master Plan
+        - heading "A Thoughtfully Planned Community" [level=3] [ref=f12e167]
+        - paragraph [ref=f12e168]:
+          - text: Planned with just
+          - strong [ref=f12e169]: 6 residential towers
+          - text: and
+          - strong [ref=f12e170]: 702 residences
+          - text: ", Orizon creates a more private and balanced living experience. Thoughtfully positioned"
+          - strong [ref=f12e171]: lifestyle zones, landscaped greens, and dedicated recreation spaces
+          - text: ensure every corner feels purposeful and connected.
+        - link "Get Full Floor Plan " [ref=f12e172] [cursor=pointer]:
+          - /url: assets/images/floor-plan/master-plan.webp
+          - generic [ref=f12e173]: Get Full Floor Plan
+          - generic [ref=f12e174]: 
+      - text:  
+    - generic [ref=f12e175]:
+      - link "Orizon Master Plan " [ref=f12e178]:
+        - /url: assets/images/floor-plan/master-plan.webp
+        - img "Orizon Master Plan" [ref=f12e179]
+        - generic [ref=f12e180]: 
+      - text:    
+  - generic [ref=f12e182]:
+    - generic [ref=f12e183]:
+      - generic [ref=f12e184]:
+        - paragraph [ref=f12e185]: Gallery
+        - heading "Every Angle Of Orizon Living" [level=2] [ref=f12e186]:
+          - text: Every Angle
+          - generic [ref=f12e187]: Of Orizon Living
+      - generic [ref=f12e188]:
+        - button "Previous slide" [disabled] [ref=f12e189]:
+          - generic [ref=f12e190]: 
+        - button "Next slide" [ref=f12e191] [cursor=pointer]:
+          - generic [ref=f12e192]: 
+    - generic [ref=f12e193]:
+      - generic:
+        - generic:
+          - paragraph: Step Inside
+          - heading "Experience Every Corner Of Orizon" [level=3]
+          - paragraph: From sunlit interiors to landscaped greens, explore the spaces that make everyday living extraordinary.
+        - generic:
+          - paragraph: That's The Gallery
+          - heading "Come See It All In Person" [level=3]
+          - paragraph: Book a site visit and walk through the spaces you just explored.
+      - generic [ref=f12e195]:
+        - group "1 / 3" [ref=f12e196]:
+          - link [ref=f12e198] [cursor=pointer]:
+            - /url: assets/images/features/guest-bedroom.webp
+            - img "Orizon interiors" [ref=f12e199]
+        - group "2 / 3" [ref=f12e200]:
+          - link [ref=f12e202] [cursor=pointer]:
+            - /url: assets/images/features/acre-area.webp
+            - img "Orizon open space" [ref=f12e203]
+        - group "3 / 3" [ref=f12e204]:
+          - link [ref=f12e206] [cursor=pointer]:
+            - /url: assets/images/banner/orizon-bg.webp
+            - img "Orizon exterior" [ref=f12e207]
+  - text: 

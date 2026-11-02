@@ -1,0 +1,189 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#top"
+  - generic [ref=e4]:
+    - paragraph
+  - generic [ref=e20]:
+    - banner:
+      - generic:
+        - generic:
+          - link "Menu Close":
+            - /url: "#menu"
+            - generic:
+              - generic:
+                - generic:
+                  - text: Menu
+                  - generic: Close
+        - generic:
+          - link "Scroll to top of the page":
+            - /url: "#top"
+          - link "Scroll to top of the page":
+            - /url: "#top"
+        - generic:
+          - generic:
+            - link "3D Map":
+              - /url: /location
+    - generic [ref=e21]:
+      - main [ref=e22]:
+        - generic [ref=e25]:
+          - heading [level=1] [ref=e30]:
+            - generic [ref=e31]: The art
+            - generic: of the sublime
+          - generic:
+            - generic:
+              - link "Scroll to the next section":
+                - /url: "#about"
+          - link "3d open the map" [ref=e32] [cursor=pointer]:
+            - /url: /location
+            - generic [ref=e36]: 3d
+            - generic [ref=e37]: openthe map
+        - generic [ref=e38]:
+          - generic [ref=e40]:
+            - paragraph: a handpickedcollection
+            - heading "of the rarest luxury homes" [level=2]: of the rarestluxury homes
+          - paragraph [ref=e48]:
+            - generic: Exclusive homesin Dubai’s mosticonic addresses.For the trueconnoisseurs
+            - generic: of fine living
+        - generic:
+          - generic:
+            - heading "SOME CREATIONS MERIT A PLACE" [level=2]: SOME CREATIONSMERIT A PLACE
+            - paragraph: Above The Lofty Adage Of Luxury
+        - generic:
+          - heading "EVOKING A SENSATION CHASED BY SO MANY, ATTAINED BY SO FEW" [level=2]: EVOKINGA SENSATIONCHASED BY SOMANY, ATTAINEDBY SO FEW
+          - generic:
+            - generic:
+              - paragraph: "The Sobha Privy Collection captures this emotion, using it as the benchmark to measure every property that bears its title. In doing so, we have crafted this ephemeral quality and made it an art form. We call it: The Art of the Sublime."
+        - generic:
+          - generic:
+            - paragraph: The feeling of something beyond,the feeling that can only be capturedby calling it
+            - generic: Sublime
+        - generic:
+          - generic:
+            - generic:
+              - paragraph: These landmark residences that made it to the Collection are the finest selection of excellence in craft. Whether it is the soaring encompassing views of the city that delight you, or waking up to birdsong in the midst of lush greenery, the Privy Collection contains it all.
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - tabpanel:
+                    - paragraph [aria-hidden]: x
+              - generic:
+                - generic:
+                  - paragraph: "1"
+                - paragraph: privycollection
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading "Tenets" [level=2]
+                      - img "Tenets"
+                    - paragraph: How does a home make it to the Sobha Privy Collection? We set our own benchmarks to make certain it was a rigorous process. We call them the Privy Collection Tenets, and each one defines a unique and unmistakable aspect that must be satisfied.
+                    - generic:
+                      - heading "Expansive Spaces" [level=3]:
+                        - generic: Expansive
+                        - generic: Spaces
+                      - paragraph: We have pushed beyond conventional boundaries in more ways than one. A Privy home features grand palatial spaces where luxury and convenience converge with equal elegance and finesse. Even in the heart of the bustling city you require a private, expansive retreat. Whether perched on a soaring tower in the sky or within an oasis of greenery, each home redefines the notion of scale.
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading "Iconic Addresses" [level=3]:
+                        - generic: Iconic
+                        - generic: Addresses
+                      - paragraph: There are some locations that are known by one and all, yet little is known about their inner private worlds. The world's most iconic addresses are chosen for homes that sit at the pinnacle of success. These residences inspire awe, and stand apart from the rest of the city.
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading "Uncompromising Finesse" [level=3]:
+                        - generic: Uncompromising
+                        - generic: Finesse
+                    - generic:
+                      - paragraph: There are some locations that are known by one and all, yet little is known about their inner private worlds. The world's most iconic addresses are chosen for homes that sit at the pinnacle of success. These residences inspire awe, and stand apart from the rest of the city.
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph: Every amenity is thoughtfully curated as an extension of your unique tastes. World-class amenities that go beyond just your needs have been fine-tuned to cater to a private and elevating experience, every day.
+                    - generic:
+                      - heading "Exclusive Amenities" [level=3]:
+                        - generic: Exclusive
+                        - generic: Amenities
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading "Exceptional service" [level=3]:
+                        - generic: Exceptional
+                        - generic: service
+                    - generic:
+                      - paragraph: Our single-minded focus is to make sure every moment spent at a Privy residence is handled with personal care and warmth. We pride ourselves on personalised services that anticipate your every wish, to ensure an extraordinary life.
+                - generic:
+                  - heading "Extraordinary Privacy" [level=3]:
+                    - generic: Extraordinary
+                    - generic: Privacy
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph: We understand and value the discretion of our residents. We've ensured that every home comes with separate accessways, private floors and exclusive amenities. So, your world remains private.
+                - generic:
+                  - heading "A cut Above" [level=3]:
+                    - generic: A cut
+                    - generic: Above
+                  - generic:
+                    - paragraph: Each jewel in this collection is a hallmark of rarity. Every address, every space and every experience have distinct aspects that set them apart.
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic [ref=e52]:
+                  - paragraph: "The process of making the Privy Collection began through exclusion: only a select number of properties can make the cut, the rarest jewels of all. Handpicked in every aspect, these residences are placed uniquely above and away from the rest."
+                - generic [ref=e55]:
+                  - paragraph: THE COLLECTIONIS CURATED FOR THOSESEEKING SPACES THATINSPIRE, elevate,and connect youto a higher senseof grandeur.
+        - generic:
+          - generic:
+            - generic:
+              - paragraph: If you mustjourney, makeit towardsthe pursuit ofthe rare andthe exceptional
+              - paragraph: Mr. Ravi MenonChairman Sobha Realty
+          - generic:
+            - generic:
+              - generic: 1 — 3
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - tabpanel:
+                          - paragraph: At Sobha Realty, the endeavour has always been to constantly raise the standard. Whether it is our craftsmanship, extreme detailing, or specialised service. Now we raise the standard of luxury living itself, with the launch of the Sobha Privy Collection.
+              - generic:
+                - paragraph: Mr. Ravi MenonChairman Sobha Realty
+      - contentinfo:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - navigation:
+                  - link "3d map":
+                    - /url: /location
+          - generic:
+            - generic:
+              - paragraph: THE FEELINGTHAT CAN ONLYBE CAPTURED BYCALLING ITSUBLIME
+              - paragraph [aria-hidden]: THE FEELING THAT CAN ONLY BE CAPTURED BY CALLING IT SUBLIME
+          - generic:
+            - generic:
+              - link "Scroll to top of the page":
+                - /url: "#top"
+            - generic:
+              - paragraph: © 2026 The Privy Collection. All Rights Reserved
+            - generic:
+              - generic:
+                - link "Website by Vide Infra":
+                  - /url: https://videinfra.com/luxury-real-estate-website-design-agency
+  - dialog "Cookie consent":
+    - generic [ref=e56]:
+      - paragraph [ref=e57]:
+        - text: This website uses
+        - link "Learn more about cookies" [ref=e58] [cursor=pointer]:
+          - /url: /privacy-policy
+          - generic [ref=e59]: cookies
+      - button "Accept use of cookies" [ref=e61] [cursor=pointer]:
+        - generic [ref=e62]: Accept
