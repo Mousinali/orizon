@@ -1113,21 +1113,25 @@
                             <input type="email" name="email" required placeholder="Enter your email"
                                 class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
                         </div>
-                        <div class="relative">
+                        <div>
                             <label class="block text-xs text-muted mb-1.5 xl:mb-1">Tower</label>
-                            <select name="tower" id="enquiry-tower" required
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso focus:outline-none focus:border-gold transition-colors appearance-none">
-                                <option value="" disabled>Select Tower</option>
-                            </select>
-                            <i class="ri-arrow-down-s-line absolute right-3.5 bottom-3 text-espresso pointer-events-none"></i>
+                            <div class="relative">
+                                <select name="tower" id="enquiry-tower" required
+                                    class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso focus:outline-none focus:border-gold transition-colors appearance-none">
+                                    <option value="" disabled>Select Tower</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line absolute right-3.5 top-1/2 -translate-y-1/2 text-espresso pointer-events-none"></i>
+                            </div>
                         </div>
-                        <div class="relative md:col-span-2 xl:col-span-1">
+                        <div class="md:col-span-2 xl:col-span-1">
                             <label class="block text-xs text-muted mb-1.5 xl:mb-1">Configuration</label>
-                            <select name="configuration" id="enquiry-configuration" required
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso bg-ivory/60 appearance-none">
-                                <option value="" disabled>Select tower first</option>
-                            </select>
-                            <i class="ri-arrow-down-s-line absolute right-3.5 bottom-3 text-muted pointer-events-none"></i>
+                            <div class="relative">
+                                <select name="configuration" id="enquiry-configuration" required
+                                    class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso bg-ivory/60 appearance-none">
+                                    <option value="" disabled>Select tower first</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line absolute right-3.5 top-1/2 -translate-y-1/2 text-muted pointer-events-none"></i>
+                            </div>
                         </div>
                         <div class="cf-turnstile md:col-span-3 xl:col-span-1" data-sitekey="0x4AAAAAAFx9ewuGqLwNH-5s"></div>
                         <p id="enquiry-captcha-error" class="hidden text-red-600 text-xs md:col-span-3 xl:col-span-1">Please verify you're not a robot.</p>
