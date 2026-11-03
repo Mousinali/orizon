@@ -1077,7 +1077,7 @@
 
         <div id="enquiry-overlay" class="absolute inset-0 flex items-end md:items-center justify-center md:p-6">
             <div id="enquiry-panel"
-                class="relative bg-white w-full md:max-w-3xl xl:max-w-4xl rounded-t-3xl md:rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] md:max-h-[85vh] overflow-y-auto xl:grid xl:grid-cols-2">
+                class="relative bg-white w-full md:max-w-2xl xl:max-w-4xl rounded-t-3xl md:rounded-2xl shadow-2xl overflow-hidden max-h-[80vh] md:max-h-[85vh] overflow-y-auto xl:grid xl:grid-cols-2">
                 <button id="enquiry-close" type="button" aria-label="Close"
                     class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory transition-colors duration-200">
                     <i class="ri-close-line text-lg"></i>
@@ -1092,47 +1092,47 @@
                     </div>
                 </div>
 
-                <div class="p-6 sm:p-8 md:p-10">
-                    <p class="text-xs md:text-sm text-gold-dark font-medium mb-2">Get In Touch</p>
-                    <h3 id="enquiry-heading" class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-2 !leading-[1.3]">Request A Callback</h3>
-                    <p class="text-muted text-sm leading-relaxed mb-6">Share your details and our team will get back to you shortly.</p>
+                <div class="p-6 sm:p-8 md:p-10 xl:p-7">
+                    <p class="text-xs md:text-sm text-gold-dark font-medium mb-2 xl:mb-1">Get In Touch</p>
+                    <h3 id="enquiry-heading" class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-2 xl:mb-1 !leading-[1.3]">Request A Callback</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6 xl:mb-3">Share your details and our team will get back to you shortly.</p>
 
-                    <form id="enquiry-form" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-4">
+                    <form id="enquiry-form" class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1 gap-4 xl:gap-2.5">
                         <div>
-                            <label class="block text-xs text-muted mb-1.5">Full Name</label>
+                            <label class="block text-xs text-muted mb-1.5 xl:mb-1">Full Name</label>
                             <input type="text" name="name" required placeholder="Enter your name"
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
                         </div>
                         <div>
-                            <label class="block text-xs text-muted mb-1.5">Phone Number</label>
+                            <label class="block text-xs text-muted mb-1.5 xl:mb-1">Phone Number</label>
                             <input type="tel" name="phone" required placeholder="Enter your phone number"
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
                         </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <label class="block text-xs text-muted mb-1.5">Email</label>
+                        <div>
+                            <label class="block text-xs text-muted mb-1.5 xl:mb-1">Email</label>
                             <input type="email" name="email" required placeholder="Enter your email"
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
                         </div>
                         <div class="relative">
-                            <label class="block text-xs text-muted mb-1.5">Tower</label>
+                            <label class="block text-xs text-muted mb-1.5 xl:mb-1">Tower</label>
                             <select name="tower" id="enquiry-tower" required
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso focus:outline-none focus:border-gold transition-colors appearance-none">
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso focus:outline-none focus:border-gold transition-colors appearance-none">
                                 <option value="" disabled>Select Tower</option>
                             </select>
                             <i class="ri-arrow-down-s-line absolute right-3.5 bottom-3 text-espresso pointer-events-none"></i>
                         </div>
-                        <div class="relative">
-                            <label class="block text-xs text-muted mb-1.5">Configuration</label>
+                        <div class="relative md:col-span-2 xl:col-span-1">
+                            <label class="block text-xs text-muted mb-1.5 xl:mb-1">Configuration</label>
                             <select name="configuration" id="enquiry-configuration" required
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso bg-ivory/60 appearance-none">
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 xl:py-2 text-base sm:text-sm text-espresso bg-ivory/60 appearance-none">
                                 <option value="" disabled>Select tower first</option>
                             </select>
                             <i class="ri-arrow-down-s-line absolute right-3.5 bottom-3 text-muted pointer-events-none"></i>
                         </div>
-                        <div class="cf-turnstile md:col-span-2 xl:col-span-1" data-sitekey="0x4AAAAAAFx9ewuGqLwNH-5s"></div>
-                        <p id="enquiry-captcha-error" class="hidden text-red-600 text-xs md:col-span-2 xl:col-span-1">Please verify you're not a robot.</p>
+                        <div class="cf-turnstile md:col-span-3 xl:col-span-1" data-sitekey="0x4AAAAAAFx9ewuGqLwNH-5s"></div>
+                        <p id="enquiry-captcha-error" class="hidden text-red-600 text-xs md:col-span-3 xl:col-span-1">Please verify you're not a robot.</p>
                         <button type="submit"
-                            class="btn-shine btn1 w-full !min-w-0 !px-6 !py-3 justify-center mt-2 md:col-span-2 xl:col-span-1">
+                            class="btn-shine btn1 w-full !min-w-0 !px-6 !py-3 xl:!py-2.5 justify-center mt-2 xl:mt-0 md:col-span-3 xl:col-span-1">
                             <span class="text-sm font-medium tracking-wide font-serif">Submit Enquiry</span>
                             <i class="ri-arrow-right-line text-sm"></i>
                         </button>
