@@ -79,13 +79,14 @@ $(function () {
         $slide.find('.gallery-card').removeClass(galleryAllHClasses).addClass(gallerySizeClasses[tier].h);
     }
 
-    new Swiper('.worlds-swiper', {
+    const worldsSwiper = new Swiper('.worlds-swiper', {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: { rotate: 0, stretch: 0, depth: 150, modifier: 1.2, slideShadows: false },
         navigation: { prevEl: '#gallery-prev', nextEl: '#gallery-next' },
+        autoplay: { delay: 3500, disableOnInteraction: false, enabled: false },
         on: {
             slideChange: function () {
                 const lastIndex = this.slides.length - 1;
@@ -99,17 +100,30 @@ $(function () {
         },
     });
 
-    new Swiper('.reasons-swiper', {
+    const reasonsSwiper = new Swiper('.reasons-swiper', {
         slidesPerView: 1.2,
         spaceBetween: 16,
         grabCursor: true,
+        loop: true,
         pagination: { el: '.reasons-swiper .swiper-pagination', clickable: true },
         navigation: { prevEl: '#reasons-prev', nextEl: '#reasons-next' },
+        autoplay: { delay: 3000, disableOnInteraction: false, enabled: false },
         breakpoints: {
             640: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 3, spaceBetween: 24 },
         },
     });
+
+    function autoplayInView(swiper, selector) {
+        const el = document.querySelector(selector);
+        if (!el) return;
+        new IntersectionObserver(
+            (entries) => entries.forEach((e) => (e.isIntersecting ? swiper.autoplay.start() : swiper.autoplay.stop())),
+            { threshold: 0.3 }
+        ).observe(el);
+    }
+    autoplayInView(worldsSwiper, '#gallery');
+    autoplayInView(reasonsSwiper, '#features');
 
     Fancybox.bind('[data-fancybox]', { theme: 'light' });
 
@@ -135,12 +149,12 @@ $(function () {
 
     function syncMapHeight() {
         const img = document.getElementById('loc-map-img');
-        if (!img.naturalWidth) return;
+        if (!img || !img.naturalWidth) return;
         const w = $('#loc-map-wrap').width();
         $('#loc-panel-google').height(w * (img.naturalHeight / img.naturalWidth));
     }
     $('#loc-map-img').on('load', syncMapHeight);
-    if (document.getElementById('loc-map-img').complete) syncMapHeight();
+    if (document.getElementById('loc-map-img')?.complete) syncMapHeight();
     $(window).on('resize', syncMapHeight);
 
     $('.loc-tab-btn').on('click', function () {
@@ -192,6 +206,7 @@ $(function () {
     function openMobileMenu() {
         $mobileMenu.removeClass('hidden');
         $('body').addClass('overflow-hidden');
+        lenis?.stop();
         $('#menu-toggle').attr('aria-expanded', true).find('i').removeClass('ri-menu-3-line').addClass('ri-close-line');
         requestAnimationFrame(() => requestAnimationFrame(() => $mobileMenu.addClass('menu-open')));
     }
@@ -199,6 +214,7 @@ $(function () {
     function closeMobileMenu() {
         $mobileMenu.removeClass('menu-open');
         $('body').removeClass('overflow-hidden');
+        lenis?.start();
         $('#menu-toggle').attr('aria-expanded', false).find('i').addClass('ri-menu-3-line').removeClass('ri-close-line');
         setTimeout(() => $mobileMenu.addClass('hidden'), 400);
     }
@@ -245,12 +261,14 @@ $(function () {
         );
         $videoModal.removeClass('hidden').addClass('flex');
         $('body').addClass('overflow-hidden');
+        lenis?.stop();
     }
 
     function closeVideoModal() {
         $videoModal.addClass('hidden').removeClass('flex');
         $videoFrame.empty();
         $('body').removeClass('overflow-hidden');
+        lenis?.start();
     }
 
     $('.faq-trigger').on('click', function () {
@@ -274,17 +292,48 @@ $(function () {
         if (e.target === this) closeVideoModal();
     });
 
+    const towerConfigs = {};
+    $('.plan-type-btn[data-tower]').each(function () {
+        const $b = $(this);
+        const tower = $b.data('tower');
+        if (!towerConfigs[tower]) towerConfigs[tower] = [];
+        towerConfigs[tower].push({ label: $b.data('label'), config: $b.data('config'), area: $b.data('area') });
+    });
+    const $enquiryTower = $('#enquiry-tower');
+    const $enquiryConfig = $('#enquiry-configuration');
+    const towerKeys = Object.keys(towerConfigs).sort();
+    towerKeys.forEach((tower) => {
+        $enquiryTower.append(`<option value="${tower}">Tower ${tower}</option>`);
+    });
+    $enquiryTower.on('change', function () {
+        const options = towerConfigs[this.value] || [];
+        $enquiryConfig.empty();
+        if (!options.length) {
+            $enquiryConfig.append('<option value="" selected disabled>Select tower first</option>');
+            return;
+        }
+        options.forEach((o, i) => {
+            const label = `Type ${o.label} - ${o.config} (${o.area})`;
+            $enquiryConfig.append(`<option value="${label}"${i === 0 ? ' selected' : ''}>${label}</option>`);
+        });
+    });
+    if (towerKeys.length) {
+        $enquiryTower.val(towerKeys[0]).trigger('change');
+    }
+
     const $enquiryModal = $('#enquiry-modal');
 
     function openEnquiryModal(heading) {
         $('#enquiry-heading').text(heading || 'Request A Callback');
         $enquiryModal.removeClass('hidden');
         $('body').addClass('overflow-hidden');
+        lenis?.stop();
         requestAnimationFrame(() => requestAnimationFrame(() => $enquiryModal.addClass('enquiry-open')));
     }
 
     function closeEnquiryModal() {
         $enquiryModal.removeClass('enquiry-open');
+        lenis?.start();
         $('body').removeClass('overflow-hidden');
         setTimeout(() => $enquiryModal.addClass('hidden'), 400);
     }
@@ -302,8 +351,15 @@ $(function () {
 
     $('#enquiry-form, #footer-cta-form').on('submit', function (e) {
         e.preventDefault();
+        if (window.turnstile && !window.turnstile.getResponse()) {
+            $('#enquiry-captcha-error').removeClass('hidden');
+            return;
+        }
+        $('#enquiry-captcha-error').addClass('hidden');
         closeEnquiryModal();
         this.reset();
+        if (towerKeys.length) $enquiryTower.val(towerKeys[0]).trigger('change');
+        window.turnstile?.reset();
     });
 
     $(document).on('keydown', function (e) {

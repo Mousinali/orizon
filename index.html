@@ -179,11 +179,10 @@
                 </p>
                 <div
                     class="opacity-0 animate-fade-up motion-reduce:animate-none motion-reduce:opacity-100 [animation-delay:450ms] mb-8">
-                    <p class="text-xs text-white mb-2">Starting From</p>
                     <p class="flex items-baseline gap-2.5">
                         <span class="relative inline-block">
                             <span class="absolute inset-x-0 bottom-0.5 h-[0.55em] -skew-x-6 bg-gradient-to-r from-gold-light to-gold"></span>
-                            <span class="relative px-1.5 text-3xl sm:text-4xl font-semibold text-white tracking-tight [text-shadow:0_2px_6px_rgba(0,0,0,0.9)]">₹85.0 L</span>
+                            <span class="relative px-1.5 text-3xl sm:text-4xl font-semibold text-white tracking-tight [text-shadow:0_2px_6px_rgba(0,0,0,0.9)]">₹85 L</span>
                         </span>
                         <span class="text-base sm:text-lg font-normal text-white/80">onwards</span>
                     </p>
@@ -311,11 +310,11 @@
                 </div>
                 <div class="flex items-center gap-3">
                     <button id="reasons-prev" aria-label="Previous reason"
-                        class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                        class="w-11 h-11 rounded-full bg-gold flex items-center justify-center text-ivory hover:bg-gold-dark transition-colors duration-200">
                         <i class="ri-arrow-left-line text-lg"></i>
                     </button>
                     <button id="reasons-next" aria-label="Next reason"
-                        class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                        class="w-11 h-11 rounded-full bg-gold flex items-center justify-center text-ivory hover:bg-gold-dark transition-colors duration-200">
                         <i class="ri-arrow-right-line text-lg"></i>
                     </button>
                 </div>
@@ -680,11 +679,11 @@
             </div>
             <div class="flex items-center gap-3">
                 <button id="gallery-prev" aria-label="Previous image"
-                    class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                    class="w-11 h-11 rounded-full bg-gold flex items-center justify-center text-ivory hover:bg-gold-dark transition-colors duration-200">
                     <i class="ri-arrow-left-line text-lg"></i>
                 </button>
                 <button id="gallery-next" aria-label="Next image"
-                    class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory hover:border-gold transition-colors duration-200">
+                    class="w-11 h-11 rounded-full bg-gold flex items-center justify-center text-ivory hover:bg-gold-dark transition-colors duration-200">
                     <i class="ri-arrow-right-line text-lg"></i>
                 </button>
             </div>
@@ -961,6 +960,7 @@
                     Find Us <span class="block text-gold">On The Map</span>
                 </h2>
             </div>
+            <!--
             <div class="inline-flex gap-1 p-1 rounded-full border border-gold/20 bg-white">
                 <button type="button" data-loc-tab="image"
                     class="loc-tab-btn active px-5 py-2.5 rounded-full text-sm font-medium tracking-wide bg-gold text-ivory transition-colors duration-200">
@@ -971,20 +971,23 @@
                     Google Map
                 </button>
             </div>
+            -->
         </div>
 
         <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 text-center">
             <p class="text-muted text-base leading-relaxed mb-10 max-w-2xl mx-auto">Orizon sits on an <strong class="text-espresso font-semibold">8.3-acre landmark site</strong> directly on <strong class="text-espresso font-semibold">Southern EM Bypass</strong>, with swift connectivity to Shahid Khudiram Metro, Garia, and South Kolkata hubs.</p>
 
             <div id="loc-map-wrap" class="w-full">
+                <!--
                 <a id="loc-panel-image" href="assets/images/map/map.webp" data-fancybox="location-map"
                     data-caption="Orizon Location Map" class="loc-panel block w-full">
                     <img id="loc-map-img" src="assets/images/map/map.webp" alt="Orizon site location map"
                         loading="lazy" decoding="async" class="w-full h-auto">
                 </a>
+                -->
                 <iframe id="loc-panel-google"
-                    data-src="https://www.google.com/maps?q=Southern+EM+Bypass,+Garia,+Kolkata&output=embed"
-                    title="Orizon location on Google Maps" class="loc-panel hidden w-full"
+                    src="https://www.google.com/maps?q=Southern+EM+Bypass,+Garia,+Kolkata&output=embed"
+                    title="Orizon location on Google Maps" class="loc-panel block w-full aspect-[16/9]"
                     style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
 
@@ -1003,44 +1006,7 @@
             class="absolute inset-0 w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/85"></div>
 
-        <div class="relative border-b border-white/10">
-            <div class="max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-16 md:py-20 text-center">
-                <p class="text-xs md:text-sm text-gold-light font-medium mb-4">Ready When You Are</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-[2.75rem] !leading-[1.2] text-white mb-8">
-                    Let's Find Your Home <span class="block text-gold-light">At Orizon</span>
-                </h2>
-                <form id="footer-cta-form" class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:items-end gap-3 text-left">
-                    <div class="flex-1">
-                        <label class="block text-xs text-white/50 mb-1.5">Full Name</label>
-                        <input type="text" name="name" placeholder="Enter your name" required
-                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-gold-light transition-colors">
-                    </div>
-                    <div class="flex-1">
-                        <label class="block text-xs text-white/50 mb-1.5">Phone Number</label>
-                        <input type="tel" name="phone" placeholder="Enter your phone" required
-                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-gold-light transition-colors">
-                    </div>
-                    <div class="flex-1">
-                        <label class="block text-xs text-white/50 mb-1.5">Email</label>
-                        <input type="email" name="email" placeholder="Enter your email" required
-                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-gold-light transition-colors">
-                    </div>
-                    <div class="flex-1">
-                        <label class="block text-xs text-white/50 mb-1.5">Configuration</label>
-                        <select disabled
-                            class="w-full rounded-full border border-white/30 bg-white/15 backdrop-blur-sm px-5 py-3 text-base sm:text-sm text-white/60 cursor-not-allowed appearance-none">
-                            <option selected>3 BHK</option>
-                        </select>
-                        <input type="hidden" name="configuration" value="3 BHK">
-                    </div>
-                    <button type="submit"
-                        class="btn-shine btn1 w-full lg:w-auto !min-w-0 !px-7 !py-3 justify-center">
-                        <span class="text-sm font-medium tracking-wide font-serif">Enquire Now</span>
-                        <i class="ri-arrow-right-line text-sm"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
+        
 
         <div class="relative max-w-[1400px] 3xl:max-w-[1600px] w-full mx-auto px-6 lg:px-10 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div>
@@ -1063,8 +1029,6 @@
                 <p class="text-white font-serif text-lg mb-4">Contact Us</p>
                 <p class="text-sm text-ivory/60 leading-relaxed mb-4">Address - 2nd Floor, 3108, Rajdanga Main Road, Plot 47, EB Block, Kolkata, West Bengal 700107</p>
                 <p class="text-sm text-ivory/60 leading-relaxed mb-4">Site Address - 76, B.C. Roy Road (Jagaddal), PS – Sonarpur, PO- Dakshin Jagaddal, Kolkata - 700151</p>
-                <p class="text-sm text-ivory/60 mb-2">Toll Free - <a href="tel:+919330208558" class="hover:text-gold-light transition-colors">+91 9330208558</a></p>
-                <p class="text-sm text-ivory/60">Email - <a href="mailto:optimumrealcon@gmail.com" class="hover:text-gold-light transition-colors">optimumrealcon@gmail.com</a></p>
             </div>
 
             <div>
@@ -1113,13 +1077,13 @@
 
         <div id="enquiry-overlay" class="absolute inset-0 flex items-end md:items-center justify-center md:p-6">
             <div id="enquiry-panel"
-                class="relative bg-white w-full md:max-w-4xl rounded-t-3xl md:rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] md:max-h-[85vh] overflow-y-auto md:grid md:grid-cols-2">
+                class="relative bg-white w-full md:max-w-3xl xl:max-w-4xl rounded-t-3xl md:rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] md:max-h-[85vh] overflow-y-auto xl:grid xl:grid-cols-2">
                 <button id="enquiry-close" type="button" aria-label="Close"
                     class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-espresso hover:bg-gold hover:text-ivory transition-colors duration-200">
                     <i class="ri-close-line text-lg"></i>
                 </button>
 
-                <div class="hidden md:block relative">
+                <div class="hidden xl:block relative">
                     <img src="assets/images/banner/orizon-bg.webp" alt="Orizon at dusk" class="absolute inset-0 w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8 text-white">
@@ -1133,7 +1097,7 @@
                     <h3 id="enquiry-heading" class="font-serif text-2xl md:text-[1.75rem] text-espresso mb-2 !leading-[1.3]">Request A Callback</h3>
                     <p class="text-muted text-sm leading-relaxed mb-6">Share your details and our team will get back to you shortly.</p>
 
-                    <form id="enquiry-form" class="space-y-4">
+                    <form id="enquiry-form" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-4">
                         <div>
                             <label class="block text-xs text-muted mb-1.5">Full Name</label>
                             <input type="text" name="name" required placeholder="Enter your name"
@@ -1144,21 +1108,31 @@
                             <input type="tel" name="phone" required placeholder="Enter your phone number"
                                 class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
                         </div>
-                        <div>
+                        <div class="md:col-span-2 xl:col-span-1">
                             <label class="block text-xs text-muted mb-1.5">Email</label>
                             <input type="email" name="email" required placeholder="Enter your email"
                                 class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso placeholder:text-muted/60 focus:outline-none focus:border-gold transition-colors">
                         </div>
-                        <div>
-                            <label class="block text-xs text-muted mb-1.5">Configuration</label>
-                            <select disabled
-                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-muted bg-ivory/60 cursor-not-allowed appearance-none">
-                                <option selected>3 BHK</option>
+                        <div class="relative">
+                            <label class="block text-xs text-muted mb-1.5">Tower</label>
+                            <select name="tower" id="enquiry-tower" required
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso focus:outline-none focus:border-gold transition-colors appearance-none">
+                                <option value="" disabled>Select Tower</option>
                             </select>
-                            <input type="hidden" name="configuration" value="3 BHK">
+                            <i class="ri-arrow-down-s-line absolute right-3.5 bottom-3 text-espresso pointer-events-none"></i>
                         </div>
+                        <div class="relative">
+                            <label class="block text-xs text-muted mb-1.5">Configuration</label>
+                            <select name="configuration" id="enquiry-configuration" required
+                                class="w-full rounded-xl border border-gold/25 px-4 py-2.5 text-base sm:text-sm text-espresso bg-ivory/60 appearance-none">
+                                <option value="" disabled>Select tower first</option>
+                            </select>
+                            <i class="ri-arrow-down-s-line absolute right-3.5 bottom-3 text-muted pointer-events-none"></i>
+                        </div>
+                        <div class="cf-turnstile md:col-span-2 xl:col-span-1" data-sitekey="0x4AAAAAAFx9ewuGqLwNH-5s"></div>
+                        <p id="enquiry-captcha-error" class="hidden text-red-600 text-xs md:col-span-2 xl:col-span-1">Please verify you're not a robot.</p>
                         <button type="submit"
-                            class="btn-shine btn1 w-full !min-w-0 !px-6 !py-3 justify-center mt-2">
+                            class="btn-shine btn1 w-full !min-w-0 !px-6 !py-3 justify-center mt-2 md:col-span-2 xl:col-span-1">
                             <span class="text-sm font-medium tracking-wide font-serif">Submit Enquiry</span>
                             <i class="ri-arrow-right-line text-sm"></i>
                         </button>
@@ -1168,6 +1142,7 @@
         </div>
     </div>
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12.2.0/swiper-bundle.min.js"></script>
